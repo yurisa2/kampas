@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -71,27 +71,13 @@ class ListProduct extends Block
     }
 
     /**
-     * Get products count on page
-     *
-     * @return int
-     */
-    public function getProductsCount()
-    {
-        return count($this->_rootElement->getElements($this->productItemLink));
-    }
-
-    /**
      * Get all terms used in sort.
      *
      * @return array
      */
     public function getSortByValues()
     {
-        $values = explode("\n", $this->_rootElement->find($this->sorter)->getText());
-        $result = [];
-        foreach ($values as $value) {
-            $result[] = trim($value);
-        }
-        return $result;
+        $sortValues = $this->_rootElement->find($this->sorter)->getText();
+        return array_filter(array_map("trim", explode("\n", $sortValues)));
     }
 }

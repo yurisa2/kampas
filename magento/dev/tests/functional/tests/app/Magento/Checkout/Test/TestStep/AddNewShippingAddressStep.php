@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -8,10 +8,11 @@ namespace Magento\Checkout\Test\TestStep;
 
 use Magento\Checkout\Test\Page\CheckoutOnepage;
 use Magento\Customer\Test\Fixture\Address;
+use Magento\Mtf\Fixture\FixtureFactory;
 use Magento\Mtf\TestStep\TestStepInterface;
 
 /**
- * Add new shipping address on checkout step.
+ * Create customer custom attribute step.
  */
 class AddNewShippingAddressStep implements TestStepInterface
 {
@@ -23,6 +24,13 @@ class AddNewShippingAddressStep implements TestStepInterface
     private $checkoutOnepage;
 
     /**
+     * Factory responsible for creating fixtures.
+     *
+     * @var FixtureFactory
+     */
+    private $fixtureFactory;
+
+    /**
      * Shipping Address fixture.
      *
      * @var Address
@@ -30,43 +38,39 @@ class AddNewShippingAddressStep implements TestStepInterface
     private $address;
 
     /**
-     * Save Shipping Address.
-     *
-     * @var boolean
-     */
-    private $save;
-
-    /**
-     * @constructor
      * @param CheckoutOnepage $checkoutOnepage
-     * @param Address|null $shippingAddress [optional]
-     * @param boolean $save [optional]
+     * @param FixtureFactory $fixtureFactory
+     * @param Address|string $address
      */
-    public function __construct(CheckoutOnepage $checkoutOnepage, Address $shippingAddress = null, $save = true)
-    {
+    public function __construct(
+        CheckoutOnepage $checkoutOnepage,
+        FixtureFactory $fixtureFactory,
+        $address
+    ) {
         $this->checkoutOnepage = $checkoutOnepage;
-        $this->address = $shippingAddress;
-        $this->save = $save;
+        $this->fixtureFactory = $fixtureFactory;
+        $this->address = $address;
     }
 
     /**
-     * Add new shipping address.
+     * Create customer account.
      *
-     * @return array
+     * @return void
      */
     public function run()
     {
         $shippingBlock = $this->checkoutOnepage->getShippingBlock();
         $shippingBlock->clickOnNewAddressButton();
-        if ($this->address) {
-            $shippingBlock->getAddressModalBlock()->fill($this->address);
-        }
-        if ($this->save) {
-            $shippingBlock->getAddressModalBlock()->save();
-        } else {
-            $shippingBlock->getAddressModalBlock()->cancel();
+        if (is_string($this->address)) {
+            $this->address = $this->fixtureFactory->create(
+                Address::class,
+                ['dataset' => $this->address]
+            );
         }
 
-        return ['shippingAddress' => $this->address];
+        if ($this->address instanceof Address) {
+            $shippingBlock->getAddressModalBlock()->fill($this->address);
+        }
+        $shippingBlock->getAddressModalBlock()->save();
     }
 }

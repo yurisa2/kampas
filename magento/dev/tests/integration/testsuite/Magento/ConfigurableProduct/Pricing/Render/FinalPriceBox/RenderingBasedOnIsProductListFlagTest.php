@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 namespace Magento\ConfigurableProduct\Pricing\Render\FinalPriceBox;
@@ -17,7 +17,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 /**
  * Test price rendering according to is_product_list flag for Configurable product
  */
-class RenderingBasedOnIsProductListFlagTest extends \PHPUnit\Framework\TestCase
+class RenderingBasedOnIsProductListFlagTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var ProductInterface
@@ -75,26 +75,13 @@ class RenderingBasedOnIsProductListFlagTest extends \PHPUnit\Framework\TestCase
      *
      * @magentoDataFixture Magento/ConfigurableProduct/_files/product_configurable.php
      * @magentoAppArea frontend
-     * @magentoDbIsolation disabled
      */
     public function testRenderingByDefault()
     {
         $html = $this->finalPriceBox->toHtml();
         self::assertContains('5.99', $html);
-        $this->assertGreaterThanOrEqual(
-            1,
-            \Magento\TestFramework\Helper\Xpath::getElementsCountForXpath(
-                '//*[contains(@class,"normal-price")]',
-                $html
-            )
-        );
-        $this->assertGreaterThanOrEqual(
-            1,
-            \Magento\TestFramework\Helper\Xpath::getElementsCountForXpath(
-                '//*[contains(@class,"old-price")]',
-                $html
-            )
-        );
+        self::assertSelectCount('.special-price', true, $html);
+        self::assertSelectCount('.old-price', true, $html);
     }
 
     /**
@@ -103,34 +90,21 @@ class RenderingBasedOnIsProductListFlagTest extends \PHPUnit\Framework\TestCase
      * Special price should be valid
      * FinalPriceBox::hasSpecialPrice should not be call
      * Regular price for Configurable product should be rendered for is_product_list = false (product page), but not be
-     * for is_product_list = true (list of products)
+     * for for is_product_list = true (list of products)
      *
      * @param bool $flag
      * @param int|bool $count
      * @magentoDataFixture Magento/ConfigurableProduct/_files/product_configurable.php
      * @magentoAppArea frontend
      * @dataProvider isProductListDataProvider
-     * @magentoDbIsolation disabled
      */
     public function testRenderingAccordingToIsProductListFlag($flag, $count)
     {
         $this->finalPriceBox->setData('is_product_list', $flag);
         $html = $this->finalPriceBox->toHtml();
         self::assertContains('5.99', $html);
-        $this->assertEquals(
-            1,
-            \Magento\TestFramework\Helper\Xpath::getElementsCountForXpath(
-                '//*[contains(@class,"normal-price")]',
-                $html
-            )
-        );
-        $this->assertEquals(
-            $count,
-            \Magento\TestFramework\Helper\Xpath::getElementsCountForXpath(
-                '//*[contains(@class,"old-price")]',
-                $html
-            )
-        );
+        self::assertSelectCount('.special-price', $count, $html);
+        self::assertSelectCount('.old-price', $count, $html);
     }
 
     /**
@@ -139,7 +113,7 @@ class RenderingBasedOnIsProductListFlagTest extends \PHPUnit\Framework\TestCase
     public function isProductListDataProvider()
     {
         return [
-            'is_not_product_list' => [false, 1],
+            'is_not_product_list' => [false, true],
             'is_product_list' => [true, 0],
         ];
     }
