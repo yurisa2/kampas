@@ -73,10 +73,11 @@ if($this->getConfig('enable_frontend')):
 										<a href="<?php echo $_product->getProductUrl() ?>"><?php echo $_product->getName() ?></a>
 									</strong>
 								</div>
+                                <center>
 								<?php
 									echo $block->getProductPrice($_product)
 								?>
-								
+								</center>            
 								<div class="add-to-links-secondary">
 									
 									
@@ -87,11 +88,14 @@ if($this->getConfig('enable_frontend')):
 											<?php $postParams = $block->getAddToCartPostParams($_product); ?>
 											<form data-role="tocart-form" action="<?php /* @escapeNotVerified */ echo $postParams['action']; ?>" method="post">
 												<?php echo $block->getBlockHtml('formkey')?>
-												<button type="submit"
+												<button type="submit" class="buybuttom">
+													<span><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
+												</button>
+												<!--<button type="submit"
 														title="<?php echo $block->escapeHtml(__('COMPRAR')); ?>"
 														class="action tocart primary">
 													<span><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
-												</button>
+												</button>-->
 											</form>
 										<?php else: ?>
 											<?php if ($_product->getIsSalable()): ?>
@@ -104,6 +108,11 @@ if($this->getConfig('enable_frontend')):
 									<?php endif; ?>
 									
 								</div>
+                                <center>
+                                    <button type="submit" class="buybuttom">
+										<span class="span-comprar"><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
+									</button>
+                                </center>
 							</div>
 						</div>						
 					</div>

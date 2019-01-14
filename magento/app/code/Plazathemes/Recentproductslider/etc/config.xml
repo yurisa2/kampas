@@ -11,13 +11,12 @@
 	    <recentproductslider>
 	        <general>
 	            <enable_frontend>1</enable_frontend>
-	            <title>Mostviewed</title>
+	            <title>Most viewed</title>
 	            <auto>0</auto>
-	            <pagination>
-				1000</pagination>
-	            <qty>15</qty>
+	            <pagination>1000</pagination>
+	            <qty>8</qty>
 	            <rows>4</rows>
-	            <show_next_back>0</show_next_back>
+	            <show_next_back>1</show_next_back>
 	            <show_navigation_control>0</show_navigation_control>
 	        </general>
 	    </recentproductslider>

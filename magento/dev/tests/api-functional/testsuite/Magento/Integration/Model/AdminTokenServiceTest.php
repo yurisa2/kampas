@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -16,6 +16,7 @@ use Magento\Integration\Model\Oauth\Token\RequestLog\Config as TokenThrottlerCon
 
 /**
  * api-functional test for \Magento\Integration\Model\AdminTokenService.
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class AdminTokenServiceTest extends WebapiAbstract
 {
@@ -49,9 +50,9 @@ class AdminTokenServiceTest extends WebapiAbstract
     public function setUp()
     {
         $this->_markTestAsRestOnly();
-        $this->tokenService = Bootstrap::getObjectManager()->get('Magento\Integration\Model\AdminTokenService');
-        $this->tokenModel = Bootstrap::getObjectManager()->get('Magento\Integration\Model\Oauth\Token');
-        $this->userModel = Bootstrap::getObjectManager()->get('Magento\User\Model\User');
+        $this->tokenService = Bootstrap::getObjectManager()->get(\Magento\Integration\Model\AdminTokenService::class);
+        $this->tokenModel = Bootstrap::getObjectManager()->get(\Magento\Integration\Model\Oauth\Token::class);
+        $this->userModel = Bootstrap::getObjectManager()->get(\Magento\User\Model\User::class);
         /** @var TokenThrottlerConfig $tokenThrottlerConfig */
         $tokenThrottlerConfig = Bootstrap::getObjectManager()->get(TokenThrottlerConfig::class);
         $this->attemptsCountToLockAccount = $tokenThrottlerConfig->getMaxFailuresCount();
@@ -301,13 +302,13 @@ class AdminTokenServiceTest extends WebapiAbstract
             'message' => 'One or more input exceptions have occurred.',
             'errors' => [
                 [
-                    'message' => '%fieldName is a required field.',
+                    'message' => '"%fieldName" is required. Enter and try again.',
                     'parameters' => [
                         'fieldName' => 'username',
                     ],
                 ],
                 [
-                    'message' => '%fieldName is a required field.',
+                    'message' => '"%fieldName" is required. Enter and try again.',
                     'parameters' => [
                         'fieldName' => 'password',
                     ]
@@ -331,7 +332,8 @@ class AdminTokenServiceTest extends WebapiAbstract
         );
         $exceptionData = $this->processRestExceptionResult($exception);
         $expectedExceptionData = [
-            'message' => 'You did not sign in correctly or your account is temporarily disabled.'
+            'message' => 'The account sign-in was incorrect or your account is disabled temporarily. '
+                . 'Please wait and try again later.'
         ];
         $this->assertEquals($expectedExceptionData, $exceptionData, "Exception message is invalid.");
     }
@@ -350,7 +352,7 @@ class AdminTokenServiceTest extends WebapiAbstract
         );
         $exceptionData = $this->processRestExceptionResult($exception);
         $expectedExceptionData = [
-            'message' => 'Consumer is not authorized to access %resources',
+            'message' => "The consumer isn't authorized to access %resources.",
             'parameters' => [
                 'resources' => 'Magento_Backend::store'
             ]

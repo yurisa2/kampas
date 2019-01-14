@@ -1,4 +1,3 @@
-#For performance and security reasons, this file will have no effect, it's just meant for use in development environments
 ############################################
 ## overrides deployment configuration mode value
 ## use command bin/magento deploy:mode:set to switch modes
@@ -136,14 +135,14 @@
 ############################################
 ## enable rewrites
 
-    Options +FollowSymLinks
+    Options +SymLinksIfOwnerMatch
     RewriteEngine on
 
 ############################################
 ## you can put here your magento root folder
 ## path relative to web root
 
-    ##RewriteBase /magento/
+    #RewriteBase /magento/
 
 ############################################
 ## workaround for HTTP authorization
@@ -154,8 +153,7 @@
 ############################################
 ## TRACE and TRACK HTTP methods disabled to prevent XSS attacks
 
-    RewriteCond %{REQUEST_METHOD} ^TRAC[EK]
-    RewriteRule .* - [L,R=405]
+    
 
 ############################################
 ## redirect for mobile user agents
@@ -201,170 +199,62 @@
 
 ###########################################
 ## Deny access to root files to hide sensitive application information
-    RedirectMatch 403 /\.git
+	RedirectMatch 403 /\.git
 
-    <Files composer.json>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files composer.lock>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files .gitignore>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files .htaccess>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files .htaccess.sample>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files .php_cs.dist>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files .travis.yml>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files CHANGELOG.md>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files COPYING.txt>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files Gruntfile.js>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files LICENSE.txt>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files LICENSE_AFL.txt>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files nginx.conf.sample>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files package.json>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files php.ini.sample>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files README.md>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files auth.json>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
-    <Files magento_umask>
-        <IfVersion < 2.4>
-            order allow,deny
-            deny from all
-        </IfVersion>
-        <IfVersion >= 2.4>
-            Require all denied
-        </IfVersion>
-    </Files>
+<Files composer.json>
+	Require all denied
+</Files>
+<Files composer.lock>
+	Require all denied
+</Files>
+<Files .gitignore>
+	Require all denied
+</Files>
+<Files .htaccess>
+	Require all denied
+</Files>
+<Files .htaccess.sample>
+	Require all denied
+</Files>
+<Files .php_cs.dist>
+	Require all denied
+</Files>
+<Files .travis.yml>
+	Require all denied
+</Files>
+<Files CHANGELOG.md>
+	Require all denied
+</Files>
+<Files COPYING.txt>
+	Require all denied
+</Files>
+<Files Gruntfile.js>
+	Require all denied
+</Files>
+<Files LICENSE.txt>
+	Require all denied
+</Files>
+<Files LICENSE_AFL.txt>
+	Require all denied
+</Files>
+<Files nginx.conf.sample>
+	Require all denied
+</Files>
+<Files package.json>
+	Require all denied
+</Files>
+<Files php.ini.sample>
+	Require all denied
+</Files>
+<Files README.md>
+	Require all denied
+</Files>
+<Files auth.json>
+	Require all denied
+</Files>
+<Files magento_umask>
+	Require all denied
+</Files>
 
 # For 404s and 403s that aren't handled by the application, show plain 404 response
 ErrorDocument 404 /pub/errors/404.php
@@ -410,5 +300,3 @@ ErrorDocument 403 /pub/errors/404.php
     </FilesMatch>
 
 </IfModule>
-
-#RewriteBase /magento/

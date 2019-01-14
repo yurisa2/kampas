@@ -1,0 +1,12 @@
+[09-Jan-2019 16:23:12 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The directory "/home/slftgear7mvo/public_html/loja/generated/code/Klarna/Core/Model/Config" cannot be deleted Warning!rmdir(/home/slftgear7mvo/public_html/loja/generated/code/Klarna/Core/Model/Config): No such file or directory in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php:414
+Stack trace:
+#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Ma in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php on line 414
+[09-Jan-2019 19:17:51 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The directory "/home/slftgear7mvo/public_html/loja/generated/code/Klarna/Core/Model/Config" cannot be deleted Warning!rmdir(/home/slftgear7mvo/public_html/loja/generated/code/Klarna/Core/Model/Config): No such file or directory in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php:414
+Stack trace:
+#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Ma in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php on line 414

@@ -8,13 +8,13 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
     <system>
-        <tab id="plaza" translate="label" sortOrder="400">
+        <tab id="Plazathemes" translate="label" sortOrder="400">
             <label>Plazathemes</label>
         </tab>
         <section id="recentproductslider" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
             <label>Recentproductslider Slider</label>
-            <tab>plaza</tab>
+             <tab>plaza</tab>
             <resource>Plazathemes_Recentproductslider::config_recentproductslider</resource>
             <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
@@ -43,29 +43,14 @@
 				<field id="qty" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Qty of Items</label>
                 </field>
-				<field id="default" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Items Default</label>
-                </field>
-				<field id="desktop" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Items On Desktop</label>
-                </field>
-				<field id="desktop_small" translate="label" type="text" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Items On Desktop Small</label>
-                </field>
-				<field id="tablet" translate="label" type="text" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Items On Tablet</label>
-                </field>
-				<field id="mobile" translate="label" type="text" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>items On Mobile</label>
-                </field>
-				<field id="rows" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+				<field id="rows" translate="label" type="text" sortOrder="26" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Number Rows Show</label>
                 </field>
-				<field id="show_next_back" translate="label comment" type="select" sortOrder="24"  showInDefault="1" showInWebsite="1" showInStore="1">
+				<field id="show_next_back" translate="label comment" type="select" sortOrder="28"  showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Show Next/Back control</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-				<field id="show_navigation_control" translate="label comment" type="select" sortOrder="26"  showInDefault="1" showInWebsite="1" showInStore="1">
+				<field id="show_navigation_control" translate="label comment" type="select" sortOrder="30"  showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Show navigation control</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>

@@ -1,54 +1,223 @@
 <div class="footer-container">
-	
+
+
+
 	<?php //echo $block->getLayout()->createBlock('Plazathemes\Brandslider\Block\Brandslider')->setTemplate('Plazathemes_Brandslider::brandslider.phtml')->toHtml();?>
+
 	<div class="footer-newsletter">
+
 		<div class="container-inner">
+
 			<?php echo $block->getLayout()->createBlock('Magento\Newsletter\Block\Subscribe')->setTemplate('Magento_Newsletter::subscribe.phtml')->toHtml();?>
+
 			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('link_follow')->toHtml();?>
+
 			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('static1_footer')->toHtml();?>
+
 		</div>
+
 	</div>
-	<div class="footer-top">
-		<div class="container-inner">
-			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_top')->toHtml();?>
-		</div>
-	</div>
-	<div class="footer-bottom" style="background-color: #cc353a; padding-top: 30px">
-		<div class="container-inner">
-			<div class="row">
-				<div class="col-md-4">
-				<img src="http://127.0.0.1/cantinho/pub/media/logo/stores/1/cantinho.png" alt="Cantinho das Essências" width="366" height="94">
-				</div>
-				<div class="col-md-5">
-					<p style="font-size: 14px; color: #fff;">R. Dr. Álvaro Soares, 380 (45,39 km) | 18010-191 Sorocaba</p>		
-					<h3 style="font-size: 24px; color: #fff;">15 3388-6756 / 3233-8723</h3>
-				</div>
-				<div class="col-md-3">
-					<div class="footer_payment">
-					<img src="http://127.0.0.1/cantinho/pub/media/logo/stores/1/logos-footer.png" alt="Cantinho das Essências" style="max-width: 100%; height: auto; display: block">
-					</div>	
-				</div>
-			</div>
-		</div>
-		<div id="back_top">
-			<a href="#back-top"><span>>top</span></a>
-		</div>
-	</div>
-</div>
-<script type="text/javascript">
+    
+    <div class="row">
+
+		<div class="footer-redesocial col-md-12 col-lg-12">
+
+            <div class="rede_facebook col-md-4 col-lg-4">
+                <center>
+                    <h3>Facebook</h3>
+			        <a href="https://www.facebook.com/cantinhodasessenciassorocaba/"><img class="thumb facebook" src="http://www.cantinhodasessencias.com.br/loja/pub/media/wysiwyg/thumb_facebook.png" alt=""> </a>
+                </center>
+		    </div>
+
+            <div class="rede_instragram col-md-4 col-lg-4">
+                <center>
+                    <h3>Instagram</h3>
+			        <a href=""><img class="thumb instragram" src="http://www.cantinhodasessencias.com.br/loja/pub/media/wysiwyg/thumb_instagram.png" alt="">
+                </center>
+		    </div>
+
+            <div class="rede_youtube col-md-4 col-lg-4">
+                <center>
+                    <h3>Youtube</h3>
+			        <a href="https://www.youtube.com/channel/UCLiU-oH8qm4c8gJI4rFw6jQ"><img class="thumb youtube" src="http://www.cantinhodasessencias.com.br/loja/pub/media/wysiwyg/thumb_youtube.png" alt="" ></a>
+                </center>
+		    </div>
 			
+		</div>
+
+	</div>
+
+	<div class="footer-top">
+
+		<div class="container-inner">
+
+			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_top')->toHtml();?>
+
+        </div>
+
+        <div class="footertop-col1 col-md-2 col-sm-2 col-lg-2">
+            <div class="footer-institucional">
+		        <h3 class="footer-h3">Institucional</h3>
+
+                    <p><a href="#">Home</a></p><br>
+
+                    <p><a href="#">Sobre nós</a></p><br>
+
+                    <p><a href="#">Produtos</a></p><br>
+
+                    <p><a href="#">Cursos</a></p><br>
+
+                    <p><a href="#">Blog</a></p><br>
+
+                    <p><a href="#">Contato</a></p>
+
+            </div>
+		</div>
+
+		<div class="footertop-col2 col-md-4 col-sm-4 col-lg-4">
+            <div class="footer-funcionamento">
+		        <h3 class="footer-h3">Horário de Funcionamento:</h3>
+
+                <p>De segunda à sexta das 09h às 18h</p><br>
+
+                <p>Aos sábados das 09h às 13h</p>
+            </div>
+            <div class="footer-trabalheconosco">
+                <h3 class="footer-h3">Trabalhe conosco</h3>
+
+                <p>Procurando emprego? Envie-nos seu currículo</p><br>
+
+                <p>trabalhe@cantinhodasessencias.com.br</p>
+            </div>
+        </div>
+
+		<div class="footertop-col3 col-md-3 col-sm-3 col-lg-3">
+            <div class="footer-frete">
+			    <h3 class="footer-h3">Frete</h3>
+
+                <p>Envio para todo o Brasil via PAC</p><br>
+
+                <p>Sedex e Tranportadora</p>
+            </div>
+            <div class="footer-formaspag">
+
+                <h3 class="footer-h3">Formas de pagamento</h3>
+
+                 <img src="http://cantinhodasessencias.com.br/formaspag.png" alt="" style="width: 100%;">
+
+            </div>
+
+		</div>
+
+       <div class="footertop-col4 col-md-3 col-sm-3 col-lg-3">
+            <div class="footer-compras">
+			    <h3 class="footer-h3">Compras</h3>
+
+                <p>Meus pedidos</p><br>
+
+                <p>Carrinho</p><br>
+
+                <p>Login</p>
+            </div>
+            <div class="footer-infoentrega">
+                <h3 class="footer-h3">Informações de entrega</h3>
+
+                <p>Informações de entrega</p><br>
+
+                <p>Políticas e Privacidade</p><br>
+
+                <p>Termos & Condições</p><br>
+
+                <p>Perguntas Frequentes</p>
+            </div>
+		</div>
+
+	</div>
+
+	<div class="footer-bottom col-md-12 col-lg-12">
+
+		<div class="container-inner col-md-10 col-lg-10">
+
+			<div class="row">
+
+				<div class="footerbottom-col1 col-md-4 col-lg-4">
+
+					<?php echo $this->getChildHtml('copyright')?>
+
+                    <img src="http://cantinhodasessencias.com.br/logocantinho.png" alt="" style="width: 100%;">
+
+				</div>
+
+
+
+				<div class="footerbottom-col2 col-md-4 col-sm-4 col-lg-4">
+
+					<?php echo $this->getChildHtml("store_switcher"); ?>
+
+                <p style="color:white;">R. Dr. Álvaro Soares, 380 (45.39 km) | 18010-191 Sorocaba<br><b>15 3388-6756 / 32338723</b></p>
+
+				</div>
+
+				<div class="footerbottom-col3 col-md-4 col-sm-4 col-lg-4">
+
+					<div class="footer_payment">
+
+						<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_payment')->toHtml();?>
+                        
+                             <img src="http://cantinhodasessencias.com.br/selo-ebit.png" alt="" style="width: 165px;">
+                        
+                       
+                             <img src="http://cantinhodasessencias.com.br/site-protegido.png" alt="" style="width: 165px;">
+                        
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="back_top" class="col-md-2 col-lg-2">
+
+			<a href="#back-top"><span>>top</span></a>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+
+
 	require(["jquery"], function($){
 
+
+
 	   $(window).scroll(function() {
+
 			if($(this).scrollTop() > 300) {
-				$('#back_top').fadeIn();   
+
+				$('#back_top').fadeIn();
+
 			} else {
+
 				$('#back_top').fadeOut();
+
 			}
+
 		});
+
 		   $('#back_top').click(function() {
+
 			$('body,html').animate({scrollTop:0},500);
-		}); 
-	   
+
+		});
+
+
+
 	});
+
 </script>

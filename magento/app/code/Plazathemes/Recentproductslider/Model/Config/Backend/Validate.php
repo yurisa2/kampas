@@ -5,7 +5,7 @@
 * @author PlazaThemes Team <contact@plazathemes.com>
 */
 
-namespace Plazathemes\Recentproductslider\Model\Config\Backend;
+namespace Plazathemes\recentproductslider\Model\Config\Backend;
 
 /**
  * Backend model for domain config value

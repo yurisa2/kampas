@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -10,6 +10,7 @@
 return [
     'Magento_AdminNotification',
     'Magento_AdvancedPricingImportExport',
+    'Magento_AdvancedSearch',
     'Magento_Authorization',
     'Magento_Authorizenet',
     'Magento_Backend',

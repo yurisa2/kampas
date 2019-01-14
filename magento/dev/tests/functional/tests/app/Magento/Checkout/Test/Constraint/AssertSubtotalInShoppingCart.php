@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -57,7 +57,7 @@ class AssertSubtotalInShoppingCart extends AbstractAssertForm
         }
 
         $error = $this->verifyData($productsData, $cartData, true);
-        \PHPUnit_Framework_Assert::assertEmpty($error, $error);
+        \PHPUnit\Framework\Assert::assertEmpty($error, $error);
     }
 
     /**

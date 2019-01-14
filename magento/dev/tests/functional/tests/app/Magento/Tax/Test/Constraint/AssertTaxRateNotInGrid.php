@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -31,7 +31,7 @@ class AssertTaxRateNotInGrid extends AbstractConstraint
         ];
 
         $taxRateIndex->open();
-        \PHPUnit_Framework_Assert::assertFalse(
+        \PHPUnit\Framework\Assert::assertFalse(
             $taxRateIndex->getTaxRateGrid()->isRowVisible($filter),
             'Tax Rate \'' . $filter['code'] . '\' is present in Tax Rate grid.'
         );

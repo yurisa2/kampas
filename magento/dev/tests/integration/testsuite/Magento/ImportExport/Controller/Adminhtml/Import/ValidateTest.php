@@ -1,11 +1,13 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 namespace Magento\ImportExport\Controller\Adminhtml\Import;
 
 use Magento\Framework\Filesystem\DirectoryList;
+use Magento\ImportExport\Model\Import;
+use Magento\ImportExport\Model\Import\ErrorProcessing\ProcessingErrorAggregatorInterface;
 
 /**
  * @magentoAppArea adminhtml
@@ -15,25 +17,33 @@ class ValidateTest extends \Magento\TestFramework\TestCase\AbstractBackendContro
     /**
      * @dataProvider validationDataProvider
      * @param string $fileName
+     * @param string $mimeType
      * @param string $message
+     * @param string $delimiter
+     * @throws \Magento\Framework\Exception\FileSystemException
      * @backupGlobals enabled
      * @magentoDbIsolation enabled
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
-    public function testValidationReturn($fileName, $message)
+    public function testValidationReturn(string $fileName, string $mimeType, string $message, string $delimiter)
     {
+        $validationStrategy = ProcessingErrorAggregatorInterface::VALIDATION_STRATEGY_STOP_ON_ERROR;
+
         $this->getRequest()->setParam('isAjax', true);
         $this->getRequest()->setMethod('POST');
         $_SERVER['HTTP_X_REQUESTED_WITH'] = 'XMLHttpRequest';
 
         /** @var $formKey \Magento\Framework\Data\Form\FormKey */
-        $formKey = $this->_objectManager->get('Magento\Framework\Data\Form\FormKey');
+        $formKey = $this->_objectManager->get(\Magento\Framework\Data\Form\FormKey::class);
         $this->getRequest()->setPostValue('form_key', $formKey->getFormKey());
         $this->getRequest()->setPostValue('entity', 'catalog_product');
         $this->getRequest()->setPostValue('behavior', 'append');
-        $this->getRequest()->setPostValue('_import_field_separator', ',');
+        $this->getRequest()->setPostValue(Import::FIELD_NAME_VALIDATION_STRATEGY, $validationStrategy);
+        $this->getRequest()->setPostValue(Import::FIELD_NAME_ALLOWED_ERROR_COUNT, 0);
+        $this->getRequest()->setPostValue('_import_field_separator', $delimiter);
 
         /** @var \Magento\TestFramework\App\Filesystem $filesystem */
-        $filesystem = $this->_objectManager->get('Magento\Framework\Filesystem');
+        $filesystem = $this->_objectManager->get(\Magento\Framework\Filesystem::class);
         $tmpDir = $filesystem->getDirectoryWrite(DirectoryList::SYS_TMP);
         $subDir = str_replace('\\', '_', __CLASS__);
         $tmpDir->create($subDir);
@@ -43,7 +53,7 @@ class ValidateTest extends \Magento\TestFramework\TestCase\AbstractBackendContro
         $_FILES = [
             'import_file' => [
                 'name' => $fileName,
-                'type' => 'text/csv',
+                'type' => $mimeType,
                 'tmp_name' => $target,
                 'error' => 0,
                 'size' => filesize($target)
@@ -53,8 +63,8 @@ class ValidateTest extends \Magento\TestFramework\TestCase\AbstractBackendContro
         $this->_objectManager->configure(
             [
                 'preferences' => [
-                    'Magento\Framework\HTTP\Adapter\FileTransferFactory' =>
-                        'Magento\ImportExport\Controller\Adminhtml\Import\HttpFactoryMock'
+                    \Magento\Framework\HTTP\Adapter\FileTransferFactory::class =>
+                        \Magento\ImportExport\Controller\Adminhtml\Import\HttpFactoryMock::class
                 ]
             ]
         );
@@ -77,12 +87,34 @@ class ValidateTest extends \Magento\TestFramework\TestCase\AbstractBackendContro
         return [
             [
                 'file_name' => 'catalog_product.csv',
-                'message' => 'File is valid'
+                'mime-type' => 'text/csv',
+                'message' => 'File is valid',
+                'delimiter' => ',',
             ],
             [
                 'file_name' => 'test.txt',
-                'message' => '\'txt\' file extension is not supported'
-            ]
+                'mime-type' => 'text/csv',
+                'message' => '\'txt\' file extension is not supported',
+                'delimiter' => ',',
+            ],
+            [
+                'file_name' => 'incorrect_catalog_product_comma.csv',
+                'mime-type' => 'text/csv',
+                'message' => 'Download full report',
+                'delimiter' => ',',
+            ],
+            [
+                'file_name' => 'incorrect_catalog_product_semicolon.csv',
+                'mime-type' => 'text/csv',
+                'message' => 'Download full report',
+                'delimiter' => ';',
+            ],
+            [
+                'file_name' => 'catalog_product.zip',
+                'mime-type' => 'application/zip',
+                'message' => 'File is valid',
+                'delimiter' => ',',
+            ],
         ];
     }
 }

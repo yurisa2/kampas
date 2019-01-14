@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -35,7 +35,7 @@ class AssertSalesReportIntervalResult extends AbstractAssertSalesReportResult
         $this->searchInSalesReportGrid($salesReport);
         $salesResult = $this->prepareSalesResult($salesReportPage->getGridBlock()->getLastResult());
         $prepareInitialResult = $this->prepareSalesResult($this->prepareExpectedResult($initialSalesResult));
-        \PHPUnit_Framework_Assert::assertEquals(
+        \PHPUnit\Framework\Assert::assertEquals(
             $prepareInitialResult,
             $salesResult,
             "Grand total Sales result is not correct."

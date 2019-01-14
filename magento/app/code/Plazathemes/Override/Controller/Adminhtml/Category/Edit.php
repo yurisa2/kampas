@@ -60,30 +60,6 @@ class Edit extends \Magento\Catalog\Controller\Adminhtml\Category\Edit
                 unset($categoryData['image']);
             }
 			
-			if (isset($categoryData['thumb_nail']['delete'])) {
-                $categoryData['thumb_nail'] = null;
-            } else {
-                unset($categoryData['thumb_nail']);
-            }
-			
-			if (isset($categoryData['cate_tab']['delete'])) {
-                $categoryData['cate_tab'] = null;
-            } else {
-                unset($categoryData['cate_tab']);
-            }
-			
-			if (isset($categoryData['thumb_popular']['delete'])) {
-                $categoryData['thumb_popular'] = null;
-            } else {
-                unset($categoryData['thumb_popular']);
-            }
-			
-			if (isset($categoryData['thumb_nail_hover']['delete'])) {
-                $categoryData['thumb_nail_hover'] = null;
-            } else {
-                unset($categoryData['thumb_nail_hover']);
-            }
-
             $category->addData($categoryData);
         }
 

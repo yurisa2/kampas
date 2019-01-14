@@ -10,7 +10,7 @@
 	<default>
 	    <testimonial>
 	        <general>
-	            <title>WHAT THEY SAY</title>
+	            <title>What our clients say</title>
 				<des>Testimonials</des>
 	            <enable_frontend>1</enable_frontend>
 	            <auto>0</auto>
