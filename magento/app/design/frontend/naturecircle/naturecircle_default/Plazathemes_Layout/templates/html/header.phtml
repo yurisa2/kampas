@@ -23,7 +23,7 @@
 					</div>
 					<div class="link-hover">
 						<p class="icon">
-						<span class="">Bem-Vindo<br />Fazer Login</span>        
+						<span class="welcome">Bem-Vindo<br />Fazer Login</span>        
 						</p>
 
 						<div>
@@ -84,4 +84,11 @@ require(["jquery"], function($){
 	});
 });
 </script>
-<img src="http://www.cantinhodasessencias.com.br/loja/pub/media/wysiwyg/main-banner.jpg" alt="" style="width: 100%;">
+<?php
+if ('/loja/index.php' || '/loja/home' || '/loja/' == $_SERVER["REQUEST_URI"]) {
+    echo '<img src="http://www.cantinhodasessencias.com.br/loja/pub/media/wysiwyg/banner_header.jpg" alt="" style="width: 100%;">';
+}
+?>
+
+
+

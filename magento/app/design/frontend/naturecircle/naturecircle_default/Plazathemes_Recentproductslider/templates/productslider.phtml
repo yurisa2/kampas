@@ -78,7 +78,7 @@ if($this->getConfig('enable_frontend')):
 									echo $block->getProductPrice($_product)
 								?>
 								</center>            
-								<div class="add-to-links-secondary">
+								<!--<div class="add-to-links-secondary">-->
 									
 									
 									
@@ -88,10 +88,16 @@ if($this->getConfig('enable_frontend')):
 											<?php $postParams = $block->getAddToCartPostParams($_product); ?>
 											<form data-role="tocart-form" action="<?php /* @escapeNotVerified */ echo $postParams['action']; ?>" method="post">
 												<?php echo $block->getBlockHtml('formkey')?>
-												<button type="submit" class="buybuttom">
+												
+                                                <center>
+                                                    <button class="buybutton action tocart primary" data-post="{&quot;action&quot;:&quot;http:\/\/www.cantinhodasessencias.com.br\/loja\/checkout\/cart\/add\/uenc\/aHR0cDovL3d3dy5jYW50aW5ob2Rhc2Vzc2VuY2lhcy5jb20uYnIvbG9qYS8%2C\/product\/1\/&quot;,&quot;data&quot;:{&quot;product&quot;:&quot;1&quot;,&quot;uenc&quot;:&quot;aHR0cDovL3d3dy5jYW50aW5ob2Rhc2Vzc2VuY2lhcy5jb20uYnIvbG9qYS8,&quot;}}" type="button" title="COMPRAR">
+										           <span class="span-comprar"><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
+									                </button>
+                                                </center>
+												<!--<button type="submit" class="buybuttom">
 													<span><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
 												</button>
-												<!--<button type="submit"
+                                                <button type="submit"
 														title="<?php echo $block->escapeHtml(__('COMPRAR')); ?>"
 														class="action tocart primary">
 													<span><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
@@ -101,18 +107,14 @@ if($this->getConfig('enable_frontend')):
 											<?php if ($_product->getIsSalable()): ?>
 												<div class="stock available"><span><?php /* @escapeNotVerified */ echo __('Em Estoque') ?></span></div>
 											<?php else: ?>
-												<div class="stock unavailable"><span><?php /* @escapeNotVerified */ echo __('Out of stock') ?></span></div>
+												<div class="stock unavailable"><center><span><?php /* @escapeNotVerified */ echo __('Out of stock') ?></span></center></div>
 											<?php endif; ?>
 										<?php endif; ?>
 									</div>
 									<?php endif; ?>
 									
-								</div>
-                                <center>
-                                    <button type="submit" class="buybuttom">
-										<span class="span-comprar"><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
-									</button>
-                                </center>
+								<!--</div>-->
+                               
 							</div>
 						</div>						
 					</div>

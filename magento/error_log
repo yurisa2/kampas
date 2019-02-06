@@ -79,3 +79,29 @@ Stack trace:
 #2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Wishlis...', NULL, 'wishlistProvide...', 'Magento\\Wishlis...')
 #3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\Abstra in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php on line 50
 [11-Jan-2019 04:10:52 UTC] PHP Fatal error:  Class Rede\Adquirencia\Model\Rede\Interceptor may not inherit from final class (Rede\Adquirencia\Model\Rede) in /home/slftgear7mvo/public_html/loja/generated/code/Rede/Adquirencia/Model/Rede/Interceptor.php on line 7
+[14-Jan-2019 15:46:06 UTC] PHP Parse error:  syntax error, unexpected 'http' (T_STRING), expecting ',' or ';' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Layout/templates/html/header.phtml on line 88
+[14-Jan-2019 15:50:54 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Layout/templates/html/footer.phtml on line 3
+[15-Jan-2019 18:00:07 UTC] PHP Parse error:  syntax error, unexpected '$_SERVER' (T_VARIABLE) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Layout/templates/html/header.phtml on line 89
+[16-Jan-2019 15:42:27 UTC] PHP Fatal error:  Uncaught Exception: User Error: Some transactions have not been committed or rolled back in /home/slftgear7mvo/public_html/loja/app/etc/env.php on line 7 in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(256, 'Some transactio...', '/home/slftgear7...', 7, Array)
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(3955): trigger_error('Some transactio...', 256)
+#2 [internal function]: Magento\Framework\DB\Adapter\Pdo\Mysql->__destruct()
+#3 {main}
+  thrown in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ErrorHandler.php on line 61
+[16-Jan-2019 16:14:32 UTC] PHP Fatal error:  Uncaught Exception: User Error: Some transactions have not been committed or rolled back in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php on line 3955 in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(256, 'Some transactio...', '/home/slftgear7...', 3955, Array)
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(3955): trigger_error('Some transactio...', 256)
+#2 [internal function]: Magento\Framework\DB\Adapter\Pdo\Mysql->__destruct()
+#3 {main}
+  thrown in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ErrorHandler.php on line 61
+[17-Jan-2019 16:53:31 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Recentproductslider/templates/productslider.phtml on line 52
+[17-Jan-2019 16:53:49 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Recentproductslider/templates/productslider.phtml on line 52
+[17-Jan-2019 18:08:04 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Cms/templates/content-home.phtml on line 26
+[17-Jan-2019 18:37:02 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 37
+[17-Jan-2019 18:38:06 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH), expecting ',' or ';' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 37
+[17-Jan-2019 18:44:29 UTC] PHP Parse error:  syntax error, unexpected '=', expecting variable (T_VARIABLE) or '{' or '$' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 3
+[17-Jan-2019 18:44:52 UTC] PHP Parse error:  syntax error, unexpected '=', expecting variable (T_VARIABLE) or '{' or '$' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 3
+[17-Jan-2019 18:44:55 UTC] PHP Parse error:  syntax error, unexpected '=', expecting variable (T_VARIABLE) or '{' or '$' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 3
+[17-Jan-2019 18:47:50 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 127

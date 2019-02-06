@@ -17,17 +17,16 @@
 	$show_pagination = $block->getConfig('pagination');
 	$auto = $block->getConfig('auto');
 	$rows = $block->getConfig('row');
-	
 ?>
 <div class="new-product-slider">
 	<div class="grud">
-		<h3><span><?php echo 'Organic'; ?></span><?php echo $this->getConfig('title') ?></h3>
+		<h3><span><?php echo 'New Products'; ?></span><?php echo $this->getConfig('title') ?></h3>
 	</div>
 	
 	<div class="owl-container">
 		<div id="new_product_slider" class="owl-carousel">
 			<?php 
-			$newItems =  $block -> getNewProduct()->getItems(); 
+			$newItems =  $block->getNewProduct()->getItems(); 
 			$imageBlock =  $block->getLayout()->createBlock('Magento\Catalog\Block\Product\Image');
 			$image = 'new_products_content_widget_grid';
 			$type = 'widget-new-grid';
@@ -53,13 +52,13 @@
 										</a>
 									</strong>
 								</div>
-								
+								<center>
 								<?php
 								echo $block->getProductPrice($_item);
 								?>
+								</center>  
+								<!--<div class="add-to-links-secondary">-->
 								
-								<div class="add-to-links-secondary">
-									
 									<div class="actions-primary">
 										<?php if ($_item->isSaleable()): ?>
 											<?php if ($_item->getTypeInstance()->hasRequiredOptions($_item)): ?>
@@ -73,22 +72,27 @@
 													$postDataHelper = $this->helper('Magento\Framework\Data\Helper\PostHelper');
 													$postData = $postDataHelper->getPostData($block->getAddToCartUrl($_item), ['product' => $_item->getEntityId()])
 												?>
-												<button class="action tocart primary"
+												<!--<button class="action tocart primary"
 														data-post='<?php echo $postData; ?>'
 														type="button" title="<?php echo __('COMPRAR') ?>">
 													<span><?php echo __('COMPRAR') ?></span>
-												</button>
+												</button>-->
+                                                <center>
+                                                    <button class="buybutton action tocart primary" data-post="{&quot;action&quot;:&quot;http:\/\/www.cantinhodasessencias.com.br\/loja\/checkout\/cart\/add\/uenc\/aHR0cDovL3d3dy5jYW50aW5ob2Rhc2Vzc2VuY2lhcy5jb20uYnIvbG9qYS8%2C\/product\/1\/&quot;,&quot;data&quot;:{&quot;product&quot;:&quot;1&quot;,&quot;uenc&quot;:&quot;aHR0cDovL3d3dy5jYW50aW5ob2Rhc2Vzc2VuY2lhcy5jb20uYnIvbG9qYS8,&quot;}}" type="button" title="COMPRAR">
+										            <span class="span-comprar"><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
+									                </button>
+                                             </center>
 											<?php endif; ?>
 										<?php else: ?>
 											<?php if ($_item->getIsSalable()): ?>
 												<div class="stock available"><span><?php echo __('Em Estoque') ?></span></div>
 											<?php else: ?>
-												<div class="stock unavailable"><span><?php echo __('Out of stock') ?></span></div>
+												<div class="stock unavailable"><center><span><?php echo __('Out of stock') ?></span></center></div>
 											<?php endif; ?>
 										<?php endif; ?>
 												
 									</div>
-								</div>
+								<!--</div>-->
 							</div>	
 						</div>
 					</div>
