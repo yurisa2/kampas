@@ -7,6 +7,18 @@ img.banner {
 }
 
 /* EDIÇÃO MENU LATERAL ADICIONANDO ICONS */
+li.level0:nth-child(2) > span:nth-child(2) {
+    position: relative;
+    margin-top: -50px;
+    display: block;
+}
+
+li.level0:nth-child(3) > span:nth-child(2) {
+position: relative;
+    margin-top: -50px;
+    display: block;
+}
+
 ul.o-list:nth-child(2) {
     padding-right: 0px;
 }
@@ -101,6 +113,27 @@ product-image-wrapper {
     height: 10.4vw;
     padding-bottom: 0px;
 }
+/*GAMBIARRA DAS BRABA*/
+main#maincontent.page-main div.columns div.column.main div.products.wrapper.grid.products-grid ol.products.list.items.product-items li.item.product.product-item div.product-item-info div.product-item-details div.price-box.price-final_price div.price-box {
+    display: none;
+}
+
+div.product-info-price div.price-box.price-final_price span.price {
+    display: none;
+}
+
+li.item.product.product-item {
+    margin-left: 0px !important;
+}
+
+html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper main#maincontent.page-main div.columns div.column.main div.block.widget.block-products-list.grid div.block-content div.products-grid.grid ol.product-items.widget-product-grid li.product-item div.product-item-info div.product-item-details div.price-box.price-final_price span.price span {
+    display: none;
+}
+
+p.minimal-price {
+    display: none;
+}
+
 
 /* FIM DA EDIÇÃO DE PRODUTOS HOME */
 
@@ -139,7 +172,7 @@ span.price {
     width: 150px !important;
     height: 25px !important;
     background-color: #37D737 !important;
-    margin-left: 2.5vw;
+    /*margin-left: 2.5vw;*/
 }
 
 .gruod-pruduct .item-inner .actions-primary button::before {
@@ -588,8 +621,16 @@ a.product.photo.product-item-photo span.product-image-container span.product-ima
     width: 210px;
 }
 
+li.item.product.product-item{
+    width: 24.439%;
+}
+
+.product-item-link {
+    text-transform: uppercase;
+}
+
 div.product-item-details strong.product.name.product-item-name {
-    margin-left: 2vw;
+    /*margin-left: 2vw;*/
     margin-top: -1.8vw;
     
 }
@@ -606,6 +647,78 @@ button.tocart span {
     position: relative;
     bottom: 0.7vw;
 }
+
+/* EDIÇÃO CARRINHO E AFINS */
+.item.product.product-item {
+    width: 100%;
+}
+
+html body.checkout-cart-index.page-layout-1column div.page-wrapper main#maincontent.page-main div.columns div.column.main div.cart-container form#form-validate.form.form-cart div.cart.main.actions a.action.continue {
+    background: #9D4D4A;
+}
+
+html body.checkout-cart-index.page-layout-1column div.page-wrapper main#maincontent.page-main div.columns div.column.main div.cart-container form#form-validate.form.form-cart div.cart.main.actions button#empty_cart_button.action.clear {
+    background: #9D4D4A;
+}
+
+html body.checkout-cart-index.page-layout-1column div.page-wrapper main#maincontent.page-main div.columns div.column.main div.cart-container form#form-validate.form.form-cart div.cart.main.actions button.action.update {
+    background: #9D4D4A;
+}
+
+.label {
+    color: #777777 !important;
+    font-weight: bold !important; 
+}
+
+html body.checkout-index-index.page-layout-checkout div.page-wrapper main#maincontent.page-main div.columns div.column.main div#checkout.checkout-container div.opc-wrapper ol#checkoutSteps.opc li#opc-shipping_method.checkout-shipping-method div.checkout-shipping-method div#checkout-step-shipping_method.step-content form#co-shipping-method-form.form.methods-shipping div#shipping-method-buttons-container.actions-toolbar div.primary button.button.action.continue.primary {
+    background: #9D4D4A;
+}
+
+html body.checkout-index-index.page-layout-checkout div.page-wrapper main#maincontent.page-main div.columns div.column.main div#checkout.checkout-container div.opc-wrapper ol#checkoutSteps.opc li#opc-shipping_method.checkout-shipping-method div.checkout-shipping-method div#checkout-step-shipping_method.step-content form#co-shipping-method-form.form.methods-shipping div#shipping-method-buttons-container.actions-toolbar div.primary button.button.action.continue.primary span {
+    color: white;
+}
+
+html body.checkout-index-index.page-layout-checkout div.page-wrapper main#maincontent.page-main div.columns div.column.main div#checkout.checkout-container div.opc-wrapper ol#checkoutSteps.opc li#shipping.checkout-shipping-address div#checkout-step-shipping.step-content form#co-shipping-form.form.form-shipping-address div#shipping-new-address-form.fieldset.address fieldset.field.street.admin__control-fields.required legend.label span {
+    float: left;
+}
+
+html body.checkout-index-index.page-layout-checkout div.page-wrapper main#maincontent.page-main div.columns div.column.main div#checkout.checkout-container div.opc-wrapper ol#checkoutSteps.opc li#shipping.checkout-shipping-address div#checkout-step-shipping.step-content form#co-shipping-form.form.form-shipping-address div#shipping-new-address-form.fieldset.address fieldset.field.street.admin__control-fields.required div.control div.field._required label.label {
+    display: none;
+}
+
+div.field {
+    border-bottom: 1px solid #D9D9D9;
+}
+/* EDIÇÃO CARRINHO E AFINS Pagamento etapa 2 */
+html body.checkout-index-index.page-layout-checkout div.page-wrapper main#maincontent.page-main div.columns div.column.main div#checkout.checkout-container div.opc-wrapper ol#checkoutSteps.opc li#payment.checkout-payment-method div#checkout-step-payment.step-content form#co-payment-form.form.payments fieldset.fieldset div#checkout-payment-method-load.opc-payment div.items.payment-methods div.payment-group div.payment-method._active div.payment-method-content form#rede-form.form fieldset#payment_form_rede.fieldset.payment.items.ccard.rede div#rede_cc_type_cvv_div.field.cvv.required label.label {
+    width: 35%;
+}
+
+html body.checkout-index-index.page-layout-checkout div.page-wrapper main#maincontent.page-main div.columns div.column.main div#checkout.checkout-container div.opc-wrapper ol#checkoutSteps.opc li#payment.checkout-payment-method div#checkout-step-payment.step-content form#co-payment-form.form.payments fieldset.fieldset div#checkout-payment-method-load.opc-payment div.items.payment-methods div.payment-group div.payment-method._active div.payment-method-content div.actions-toolbar div.primary button.action.primary.checkout {
+    background: #9D4D4A;
+}
+
+html body.checkout-index-index.page-layout-checkout div.page-wrapper main#maincontent.page-main div.columns div.column.main div#checkout.checkout-container div.opc-wrapper ol#checkoutSteps.opc li#payment.checkout-payment-method div#checkout-step-payment.step-content form#co-payment-form.form.payments fieldset.fieldset div#checkout-payment-method-load.opc-payment div.items.payment-methods div.payment-group div.payment-method._active div.payment-method-content div.actions-toolbar div.primary button.action.primary.checkout span {
+    color: white;
+}
+
+html body.checkout-index-index.page-layout-checkout div.page-wrapper main#maincontent.page-main div.columns div.column.main div#checkout.checkout-container div.opc-wrapper ol#checkoutSteps.opc li#payment.checkout-payment-method div#checkout-step-payment.step-content form#co-payment-form.form.payments fieldset.fieldset div#checkout-payment-method-load.opc-payment div.items.payment-methods div.payment-group div.payment-method._active div.payment-method-content div.actions-toolbar div.secondary {
+    display: none;
+}
+
+html body.checkout-onepage-success.page-layout-1column div.page-wrapper main#maincontent.page-main div.columns div.column.main div.checkout-success div.actions-toolbar div.primary a.action.primary.continue {
+    background: #9D4D4A;
+}
+
+html body.checkout-onepage-success.page-layout-1column div.page-wrapper main#maincontent.page-main div.columns div.column.main div.checkout-success div.actions-toolbar div.primary a.action.primary.continue {
+    color: white;
+}
+
+html body.checkout-cart-index.page-layout-1column div.page-wrapper main#maincontent.page-main div.columns div.column.main div.cart-empty p a {
+    color: #2C2C2C;
+}
+
+
 /* EDICAO PAGE CURSOS */
 html body.cms-cursos.cms-page-view.page-layout-1column div.page-wrapper main#maincontent.page-main div.columns div.column.main ul.cursos.col-lg-12 li.col-lg-4 h3 a {
     color: #CC353A;
@@ -671,6 +784,34 @@ div#tab-label-reviews.data.item.title {
 a#tab-label-additional-title.data.switch {
     display: none;
 }
+
+div.block.related div.block-title.title {
+    display: inherit;
+}
+
+
+div.column.main div.block.upsell div.block-title.title {
+    display: inherit;
+}
+
+/*div.column.main div.product.info.detailed div.product.data.items {
+    display: none;
+}*/
+
+div.column.main div.product-info-main div.product-social-links {
+    display: none;
+}
+
+div.column.main div.block.related div.block-title.title strong#block-related-heading {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+div.column.main div.block.upsell div.block-title.title strong#block-upsell-heading {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
 /* EDIÇÃO PAGE SOBRE NÓS */
 .about-text {
     margin: 24px;
@@ -730,6 +871,11 @@ html body.blog-category-sabonetes.blog-category-view.page-layout-2columns-right 
     display: block;
 }
 
+html body.checkout-cart-index.page-layout-1column div.page-wrapper main#maincontent.page-main div.columns div.column.main div.block.crosssell div.block-title.title strong#block-crosssell-heading {
+    padding-top: 0px;
+    margin-top; 0px;
+}
+
 /* NO ROUTE PAGE */
 dl {
   margin-left: 40px;
@@ -738,3 +884,130 @@ dl {
 html body.cms-no-route.cms-page-view.page-layout-2columns-left div.page-wrapper main#maincontent.page-main div.columns div.column.main dl dd ul.disc li a {
     color: #777777;    
 }
+
+html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper header.header-container div.header div.h-left nav.nav-container.visible-lg.visible-md {
+    display: none !important;
+}
+
+.header .h-left {
+    background: #414042;
+}
+
+.mobile-bar-icon {
+    line-height: 2.5rem;
+}
+
+div.h-left {
+    height: 25px;
+}
+/*EDIÇÃO MOBILE*/
+@media only screen and (max-width: 992px) {
+    .header .h-left {
+        width: 100% !important;
+    }
+
+    li.product-item {
+       width: 30% !important;     
+    }
+
+    /*body {
+        background: aqua;
+  }*/
+}
+
+@media only screen and (max-width: 768px) {
+/*body {
+        background: red;
+  }*/
+    html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper main#maincontent.page-main div.columns div.c-sidebar.c-sidebar--categories {
+        display: none;
+    }
+
+html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper div.content-home div.main-container div.gruod-pruduct div.container-inner div.row {
+    display: none;
+}
+
+html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper div.content-home div.main-container div {
+    display: none;
+}
+
+html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper div.content-home div.footer-newsletter {
+    display: none;
+}
+
+html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper footer.page-footer div.row {
+    display: none;
+}
+
+div.footertop-col2 {
+    padding-left: 0px !important; 
+}
+
+div.footertop-col3.col-md-3.col-xs-3.col-sm-3.col-lg-3 div.footer-formaspag {
+    padding-top: 25px !important;
+}
+
+div.footertop-col1 {
+    width: 15%;
+}
+
+div.footertop-col2 {
+    width: 37%;
+}
+
+ div.footertop-col3 {
+    width: 23%;
+}
+
+ div.footertop-col4 {
+    width: 21%;
+}
+
+/*.mobile-bar-icon {
+    top: 7.5%;
+    right: 2%;
+    line-height: 0px;
+}*/
+
+html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper header.header-container div.header div.h-left p {
+    visibility: hidden;
+}
+}
+
+@media only screen and (max-width: 766px) {
+/*.mobile-bar-icon {
+    top: 7.5%;
+    left: 95%;
+}*/
+
+.page-wrapper > img:nth-child(3){
+    display: none;
+}
+
+html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper main#maincontent.page-main div.columns div.column.main {
+    padding-top: 100px; 
+}
+}
+
+@media only screen and (max-width: 750px) {
+div.header div.phone-socialmedia {
+    display: none;
+}
+
+div.link-hover {
+    display: none;
+}
+
+span.welcome {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 720px) {
+html body.cms-home.cms-index-index.page-layout-2columns-left div.page-wrapper footer.page-footer div.footer-top {
+    display: none;
+}
+
+}
+
+

@@ -1,0 +1,3 @@
+CODPROD -> SKU
+DESCRPROD/REFFORN -> prod Name
+CARACTERISTICAS -> short desc
