@@ -21,7 +21,8 @@ a:visited, .alink:visited{
  	color: @general_link_color;
  }
 a{ 
-	color: @general_link_color;
+	/*color: @general_link_color;*/
+    color: #777777 !important;
 	.transition();
 	&:hover{
 		text-decoration: none;
@@ -41,8 +42,16 @@ input,select,textarea {
 		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); 
 	}
 }
+
+div.shipping-information-title button.action.action-edit:before {
+    content: 'Alterar' !important;
+    font-size: 16px !important;
+}
+button.action.action-edit {
+    background: none !important;   
+}
 button{
-	background: none;
+	background: #9D4D4A !important;
 	text-transform: capitalize;
 	font-size: 1.2rem;
 	padding: 0 20px;

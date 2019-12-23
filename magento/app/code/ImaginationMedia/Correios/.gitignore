@@ -1,8 +1,10 @@
 
-imaginationmedia_correios-1\.1\.4\.zip
+*.zip
 
-manual\.docx
+*.docx
 
-manual\.pdf
+*.pdf
 
 \.DS_Store
+
+.idea

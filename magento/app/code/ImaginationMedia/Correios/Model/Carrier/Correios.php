@@ -6,8 +6,8 @@
  * Correios Shipping Method for Magento 2.
  *
  * @package ImaginationMedia\Correios
- * @author Igor Ludgero Miura <igor@imaginemage.com>
- * @copyright Copyright (c) 2017 Imagination Media (http://imaginemage.com/)
+ * @author Igor Ludgero Miura <igor@imaginationmedia.com>
+ * @copyright Copyright (c) 2017 Imagination Media (https://www.imaginationmedia.com/)
  * @license https://opensource.org/licenses/OSL-3.0.php Open Software License 3.0
  */
 
@@ -128,7 +128,8 @@ class Correios extends AbstractCarrier implements CarrierInterface
         CotacoesRepository $_cotacoes,
         UrlInterface $urlBuilder,
         array $data = []
-    ) {
+    )
+    {
         $this->_statusFactory = $statusFactory;
         $this->_helper = $helperData;
         $this->_rateResultFactory = $rateResultFactory;
@@ -167,9 +168,9 @@ class Correios extends AbstractCarrier implements CarrierInterface
             $this->_storeScope
         );
         if ($this->_scopeConfig->getValue(
-            'carriers/imaginationmedia_correios/webservice_url',
-            $this->_storeScope
-        ) != "") {
+                'carriers/imaginationmedia_correios/webservice_url',
+                $this->_storeScope
+            ) != "") {
             $this->_url = $this->_scopeConfig->getValue(
                 'carriers/imaginationmedia_correios/webservice_url',
                 $this->_storeScope
@@ -184,9 +185,9 @@ class Correios extends AbstractCarrier implements CarrierInterface
         );
 
         if ((int)$this->_scopeConfig->getValue(
-            'carriers/imaginationmedia_correios/default_height',
-            $this->_storeScope
-        ) > 0) {
+                'carriers/imaginationmedia_correios/default_height',
+                $this->_storeScope
+            ) > 0) {
             $this->_defHeight = (int)$this->_scopeConfig->getValue(
                 'carriers/imaginationmedia_correios/default_height',
                 $this->_storeScope
@@ -196,9 +197,9 @@ class Correios extends AbstractCarrier implements CarrierInterface
         }
 
         if ((int)$this->_scopeConfig->getValue(
-            'carriers/imaginationmedia_correios/default_width',
-            $this->_storeScope
-        ) > 0) {
+                'carriers/imaginationmedia_correios/default_width',
+                $this->_storeScope
+            ) > 0) {
             $this->_defWidth = (int)$this->_scopeConfig->getValue(
                 'carriers/imaginationmedia_correios/default_width',
                 $this->_storeScope
@@ -208,9 +209,9 @@ class Correios extends AbstractCarrier implements CarrierInterface
         }
 
         if ((int)$this->_scopeConfig->getValue(
-            'carriers/imaginationmedia_correios/default_depth',
-            $this->_storeScope
-        ) > 0) {
+                'carriers/imaginationmedia_correios/default_depth',
+                $this->_storeScope
+            ) > 0) {
             $this->_defDepth = (int)$this->_scopeConfig->getValue(
                 'carriers/imaginationmedia_correios/default_depth',
                 $this->_storeScope
@@ -222,11 +223,10 @@ class Correios extends AbstractCarrier implements CarrierInterface
             'carriers/imaginationmedia_correios/weight_type',
             $this->_storeScope
         );
-        $postingMethods = explode(",", $this->_scopeConfig->getValue(
+        $this->_postingMethods = explode(",", $this->_scopeConfig->getValue(
             'carriers/imaginationmedia_correios/posting_methods',
             $this->_storeScope
         ));
-        $this->_postingMethods = $this->_helper->getPostMethodCodes($postingMethods);
         $this->_deleteCodes = explode(",", "008,-10,16");
         if ($this->_scopeConfig->getValue('carriers/imaginationmedia_correios/owner_hands', $this->_storeScope) == 0) {
             $this->_ownerHands = 'N';
@@ -235,9 +235,9 @@ class Correios extends AbstractCarrier implements CarrierInterface
         }
 
         if ($this->_scopeConfig->getValue(
-            'carriers/imaginationmedia_correios/received_warning',
-            $this->_storeScope
-        ) == 0) {
+                'carriers/imaginationmedia_correios/received_warning',
+                $this->_storeScope
+            ) == 0) {
             $this->_receivedWarning = 'N';
         } else {
             $this->_receivedWarning = 'S';
@@ -280,9 +280,9 @@ class Correios extends AbstractCarrier implements CarrierInterface
 
         $this->_handlingFee = 0;
         if ($this->_scopeConfig->getValue(
-            "carriers/imaginationmedia_correios/handling_fee",
-            $this->_storeScope
-        ) != "") {
+                "carriers/imaginationmedia_correios/handling_fee",
+                $this->_storeScope
+            ) != "") {
             if (is_numeric($this->_scopeConfig->getValue(
                 "carriers/imaginationmedia_correios/handling_fee",
                 $this->_storeScope
@@ -294,7 +294,7 @@ class Correios extends AbstractCarrier implements CarrierInterface
             }
         }
 
-        if ($this->_enabled==0) {
+        if ($this->_enabled == 0) {
             $this->_helper->logMessage("Module disabled");
             return false;
         }
@@ -318,8 +318,8 @@ class Correios extends AbstractCarrier implements CarrierInterface
             $this->_cubic = $this->_helper->getCubicWeight($this->_session->getQuote());
         }
         $arrayConsult = $this->generateConsultUrl($request);
-        $correiosMethods = array();
-        if ($this->_functionMode==2 || $this->_functionMode==3) {
+        $correiosMethods = [];
+        if ($this->_functionMode == 2 || $this->_functionMode == 3) {
             $correiosMethods = $this->_helper->getOnlineShippingQuotes($arrayConsult);
         }
 
@@ -328,16 +328,16 @@ class Correios extends AbstractCarrier implements CarrierInterface
         } else {
             $this->_freeShipping = false;
         }
-        $invalidPostcodeChars = array("-",".");
+        $invalidPostcodeChars = ["-", "."];
         $postcodeNumber = str_replace($invalidPostcodeChars, "", $this->_destinationPostCode);
         //If not available online get offline
-        if (($this->_functionMode == 2 && count($correiosMethods) != count($postingMethods))
+        if (($this->_functionMode == 2 && count($correiosMethods) != count($this->_postingMethods))
             || $this->_functionMode == 1) {
             $deliveryMessage = $this->_scopeConfig->getValue(
                 "carriers/imaginationmedia_correios/deliverydays_message",
                 $this->_storeScope
             );
-            if ($deliveryMessage=="") {
+            if ($deliveryMessage == "") {
                 $deliveryMessage = "%s - Em média %d dia(s)";
             }
             $showDeliveryDays = $this->_scopeConfig->getValue(
@@ -352,18 +352,18 @@ class Correios extends AbstractCarrier implements CarrierInterface
                 $haveToGetOffline = true;
                 foreach ($correiosMethods as $onlineMethods) {
                     if ($onlineMethods["servico"] == $method && ($onlineMethods["valor"] > 0 &&
-                            $onlineMethods["prazo"]>0)) {
+                            $onlineMethods["prazo"] > 0)) {
                         $haveToGetOffline = false;
                     }
                 }
                 if ($haveToGetOffline) {
-                    if ($this->_cubic<=10) {
+                    if ($this->_cubic <= 10) {
                         $correiosWeight = max($this->_weight, $this->_cubic);
                     } else {
                         $correiosWeight = $this->_cubic;
                     }
 
-                    if (is_int($correiosWeight)==false) {
+                    if (is_int($correiosWeight) == false) {
                         if ($correiosWeight > 0.5) {
                             $correiosWeight = round($correiosWeight);
                         } else {
@@ -378,9 +378,9 @@ class Correios extends AbstractCarrier implements CarrierInterface
                         ->getFirstItem();
                     if ($cotacaoOffline) {
                         if ($cotacaoOffline->getData()) {
-                            if ($cotacaoOffline->getValor()>0) {
-                                $data = array();
-                                if ($showDeliveryDays==0) {
+                            if ($cotacaoOffline->getValor() > 0) {
+                                $data = [];
+                                if ($showDeliveryDays == 0) {
                                     $data['servico'] = $this->_helper->getMethodName($cotacaoOffline->getServico());
                                 } else {
                                     $data['servico'] = sprintf(
@@ -390,10 +390,10 @@ class Correios extends AbstractCarrier implements CarrierInterface
                                     );
                                 }
                                 $data['valor'] = str_replace(
-                                    ",",
-                                    ".",
-                                    $cotacaoOffline->getValor()
-                                ) + $this->_handlingFee;
+                                        ",",
+                                        ".",
+                                        $cotacaoOffline->getValor()
+                                    ) + $this->_handlingFee;
                                 $data['prazo'] = $cotacaoOffline->getPrazo() + $addDeliveryDays;
                                 $data['servico_codigo'] = $cotacaoOffline->getServico();
                                 $correiosMethods[] = $data;
@@ -445,9 +445,9 @@ class Correios extends AbstractCarrier implements CarrierInterface
      */
     protected function _getTracking($code)
     {
-        return array(
-            'url' => 'http://www.linkcorreios.com.br/?id='.$code
-        );
+        return [
+            'url' => 'http://www.linkcorreios.com.br/?id=' . $code
+        ];
     }
 
     /**
@@ -461,7 +461,7 @@ class Correios extends AbstractCarrier implements CarrierInterface
         $tracking->setCarrier($this->_code);
         $tracking->setCarrierTitle("Correios");
         $tracking->setTracking($number);
-        if ($aux!=false) {
+        if ($aux != false) {
             $tracking->addData($aux);
         }
         return $tracking;
@@ -473,16 +473,16 @@ class Correios extends AbstractCarrier implements CarrierInterface
      */
     protected function generateConsultUrl($request)
     {
-        if (count($this->_postingMethods)>0) {
-            $arrayConsult = array();
+        if (count($this->_postingMethods) > 0) {
+            $arrayConsult = [];
             foreach ($this->_postingMethods as $_method) {
-                if ($this->_cubic<=10) {
+                if ($this->_cubic <= 10) {
                     $correiosWeight = max($this->_weight, $this->_cubic);
                 } else {
                     $correiosWeight = $this->_cubic;
                 }
 
-                if ($this->_login!="") {
+                if ($this->_login != "") {
                     $url_d = $this->_url . "&nCdEmpresa=" . $this->_login . "&sDsSenha=" .
                         $this->_password . "&nCdFormato=1&nCdServico=" . $_method . "&nVlComprimento=" .
                         $this->_defWidth . "&nVlAltura=" . $this->_defHeight . "&nVlLargura=" .
@@ -518,7 +518,8 @@ class Correios extends AbstractCarrier implements CarrierInterface
         if (in_array($methodCode, $this->_helper->getPacCodes())) {
             $originAddress = json_decode($this->_helper->makeCurlCall("https://viacep.com.br/ws/" . $this->_origPostcode . "/json/"), true);
             $destinationAddress = json_decode($this->_helper->makeCurlCall("https://viacep.com.br/ws/" . $postCode . "/json/"), true);
-            if ($originAddress["localidade"] === $destinationAddress["localidade"]) {
+            if ((key_exists("erro", $destinationAddress) && (bool)$destinationAddress["erro"] === true)
+                || $originAddress["localidade"] === $destinationAddress["localidade"]) {
                 $this->_helper->logMessage("PAC unavailable, origin and destination in same region.");
                 return false;
             } else {

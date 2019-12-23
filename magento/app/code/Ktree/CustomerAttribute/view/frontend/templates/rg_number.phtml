@@ -1,0 +1,6 @@
+<div class="field rg_number required">
+   <label class="label" for="rg_number"><span><?php /* @escapeNotVerified */ echo __('RG') ?></span></label>
+    <div class="control">
+        <input type="text" required id="rg_number" name="rg_number"  title="<?php /* @escapeNotVerified */ echo __('RG') ?>" class="input-text" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="9">
+    </div>
+</div>

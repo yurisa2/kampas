@@ -1,0 +1,20 @@
+[09-Jan-2019 16:23:12 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The directory "/home/slftgear7mvo/public_html/loja/generated/code/Klarna/Core/Model/Config" cannot be deleted Warning!rmdir(/home/slftgear7mvo/public_html/loja/generated/code/Klarna/Core/Model/Config): No such file or directory in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php:414
+Stack trace:
+#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Ma in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php on line 414
+[09-Jan-2019 19:17:51 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The directory "/home/slftgear7mvo/public_html/loja/generated/code/Klarna/Core/Model/Config" cannot be deleted Warning!rmdir(/home/slftgear7mvo/public_html/loja/generated/code/Klarna/Core/Model/Config): No such file or directory in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php:414
+Stack trace:
+#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
+#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Ma in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php on line 414
+[18-Apr-2019 20:47:44 UTC] PHP Fatal error:  Uncaught RuntimeException: Source class "\Rede" for "RedeLogger" generation does not exist. in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Code/Generator.php:218
+Stack trace:
+#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Code/Generator.php(124): Magento\Framework\Code\Generator->tryToLoadSourceClass('RedeLogger', Object(Magento\Framework\ObjectManager\Profiler\Code\Generator\Logger))
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('RedeLogger')
+#2 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('RedeLogger')
+#3 [internal function]: spl_autoload_call('RedeLogger')
+#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Relations/Runtime.php(38): class_exists('RedeLogger')
+#5 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Interception/Config/Config.php(157): Magento\Framework\ObjectManager\Relations\Runtime->has('RedeLogg in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Code/Generator.php on line 218

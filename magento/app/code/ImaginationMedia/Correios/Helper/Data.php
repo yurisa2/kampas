@@ -6,8 +6,9 @@
  * Correios Shipping Method for Magento 2.
  *
  * @package ImaginationMedia\Correios
- * @author Igor Ludgero Miura <igor@imaginemage.com>
- * @copyright Copyright (c) 2017 Imagination Media (http://imaginemage.com/)
+ * @author Igor Ludgero Miura <igor@imaginationmedia.com>
+ * @author Douglas Ianitsky <ianitsky@gmail.com>
+ * @copyright Copyright (c) 2017 Imagination Media (https://www.imaginationmedia.com/)
  * @license https://opensource.org/licenses/OSL-3.0.php Open Software License 3.0
  */
 
@@ -15,9 +16,11 @@ namespace ImaginationMedia\Correios\Helper;
 
 use ImaginationMedia\Correios\Model\CotacoesFactory;
 use ImaginationMedia\Correios\Model\ResourceModel\Cotacoes as ResourceModel;
+use Magento\Backend\Model\Session\Quote as BackendSessionQuote;
 use Magento\Catalog\Model\ProductRepository;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Helper\AbstractHelper;
+use Magento\Framework\App\State;
 use Magento\Store\Model\ScopeInterface;
 use Zend\Log\Logger;
 use Zend\Log\Writer\Stream;
@@ -42,7 +45,7 @@ class Data extends AbstractHelper
     /**
      * @var array
      */
-    protected $obligatoryLogin = array(4162,40436,40444,81019,4669);
+    protected $obligatoryLogin = [4162, 40436, 40444, 81019, 4669];
 
     /**
      * @var CotacoesFactory
@@ -55,9 +58,24 @@ class Data extends AbstractHelper
     protected $resourceModel;
 
     /**
+     * @var BackendSessionQuote
+     */
+    protected $backendSessionQuote;
+
+    /**
      * @var Logger
      */
     protected $logger;
+
+    /**
+     * @var array
+     */
+    protected $methods;
+
+    /**
+     * @var State
+     */
+    protected $appState;
 
     /**
      * Data constructor.
@@ -65,58 +83,60 @@ class Data extends AbstractHelper
      * @param ScopeConfigInterface $scopeConfig
      * @param CotacoesFactory $cotacoesFactory
      * @param ResourceModel $resourceModel
+     * @param BackendSessionQuote $backendSessionQuote
+     * @param State $appState
      */
     public function __construct(
         ProductRepository $productRepository,
         ScopeConfigInterface $scopeConfig,
         CotacoesFactory $cotacoesFactory,
-        ResourceModel $resourceModel
-    ) {
+        ResourceModel $resourceModel,
+        BackendSessionQuote $backendSessionQuote,
+        State $appState
+    )
+    {
         $this->storeScope = ScopeInterface::SCOPE_STORE;
         $this->scopeConfig = $scopeConfig;
         $this->productRepository = $productRepository;
         $this->cotacoesFactory = $cotacoesFactory;
         $this->resourceModel = $resourceModel;
+        $this->backendSessionQuote = $backendSessionQuote;
+        $this->appState = $appState;
         $writer = new Stream(BP . '/var/log/imaginationmedia_correios.log');
         $this->logger = new Logger();
         $this->logger->addWriter($writer);
     }
 
-    /**
-     * @param (int)$method
-     * @return string
-     */
-    public function getMethodName($method)
+    public function getMethodsData()
     {
-        $method = (int)$method;
-        if ($method === 40010 || $method === 4162 || $method === (int)$this->scopeConfig->getValue(
-            'correios_postingmethods_config/settings/sedex',
-            $this->storeScope
-        )) {
-            return "Sedex";
-        } elseif ($method === 41106 || $method === 4669 || $method === (int)$this->scopeConfig->getValue(
-            'correios_postingmethods_config/settings/pac',
-            $this->storeScope
-        )) {
-            return "PAC ";
-        } elseif ($method === 40215 || $method === (int)$this->scopeConfig->getValue(
-            'correios_postingmethods_config/settings/sedex10',
-            $this->storeScope
-        )) {
-            return "Sedex 10";
-        } elseif ($method === 40290 || $method === (int)$this->scopeConfig->getValue(
-            'correios_postingmethods_config/settings/sedex_hoje',
-            $this->storeScope
-        )) {
-            return "Sedex HOJE";
-        } elseif ($method === 40045 || $method === (int)$this->scopeConfig->getValue(
-            'correios_postingmethods_config/settings/sedex_cobrar',
-            $this->storeScope
-        )) {
-            return "Sedex a cobrar";
-        } else {
-            return "Undefined";
+        if (!$this->methods) {
+            $methods = $this->scopeConfig->getValue(
+                'correios_postingmethods_config/settings/methods',
+                $this->storeScope
+            );
+            $this->methods = json_decode($methods, true);
         }
+        return $this->methods;
+    }
+
+    /**
+     * Get method name
+     * @param $methodCode
+     * @return mixed
+     */
+    public function getMethodName($methodCode)
+    {
+        $methodCode = (int)$methodCode;
+
+        $methods = $this->getMethodsData();
+
+        foreach ($methods as $method) {
+            if ($methodCode === (int)$method['code']) {
+                return $method['name'];
+            }
+        }
+
+        return __("Undefined");
     }
 
     /**
@@ -148,9 +168,9 @@ class Data extends AbstractHelper
             $this->storeScope
         );
         if ((int)$this->scopeConfig->getValue(
-            'carriers/imaginationmedia_correios/default_height',
-            $this->storeScope
-        ) > 0) {
+                'carriers/imaginationmedia_correios/default_height',
+                $this->storeScope
+            ) > 0) {
             $defHeight = (int)$this->scopeConfig->getValue(
                 'carriers/imaginationmedia_correios/default_height',
                 $this->storeScope
@@ -159,9 +179,9 @@ class Data extends AbstractHelper
             $defHeight = 2;
         }
         if ((int)$this->scopeConfig->getValue(
-            'carriers/imaginationmedia_correios/default_width',
-            $this->storeScope
-        ) > 0) {
+                'carriers/imaginationmedia_correios/default_width',
+                $this->storeScope
+            ) > 0) {
             $defWidth = (int)$this->scopeConfig->getValue(
                 'carriers/imaginationmedia_correios/default_width',
                 $this->storeScope
@@ -170,17 +190,17 @@ class Data extends AbstractHelper
             $defWidth = 16;
         }
         if ((bool)$this->scopeConfig->getValue(
-            'carriers/imaginationmedia_correios/owner_hands',
-            $this->storeScope
-        ) === false) {
+                'carriers/imaginationmedia_correios/owner_hands',
+                $this->storeScope
+            ) === false) {
             $ownerHands = 'N';
         } else {
             $ownerHands = 'S';
         }
         if ((bool)$this->scopeConfig->getValue(
-            'carriers/imaginationmedia_correios/received_warning',
-            $this->storeScope
-        ) === false) {
+                'carriers/imaginationmedia_correios/received_warning',
+                $this->storeScope
+            ) === false) {
             $receivedWarning = 'N';
         } else {
             $receivedWarning = 'S';
@@ -191,12 +211,12 @@ class Data extends AbstractHelper
             $this->storeScope
         );
         //Check if the service needs the login and password
-        if (in_array($service, $this->obligatoryLogin) === true && ($login==="" || $password==="")) {
-            $this->logMessage("Impossible to calculate the service ".$service.
+        if (in_array($service, $this->obligatoryLogin) === true && ($login === "" || $password === "")) {
+            $this->logMessage("Impossible to calculate the service " . $service .
                 " because the login/password isn't filled.");
             return false;
         }
-        if ($login!="") {
+        if ($login != "") {
             $url_d = $url . "&nCdEmpresa=" . $login . "&sDsSenha=" . $password . "&nCdFormato=1&nCdServico=" .
                 $service . "&nVlComprimento=" . $defWidth . "&nVlAltura=" . $defHeight . "&nVlLargura=" .
                 $defWidth . "&sCepOrigem=" . $origPostcode . "&sCdMaoPropria=" . $ownerHands . "&sCdAvisoRecebimento=" .
@@ -245,9 +265,9 @@ class Data extends AbstractHelper
         );
         $handlingFee = 0;
         if ($this->scopeConfig->getValue(
-            "carriers/imaginationmedia_correios/handling_fee",
-            $this->storeScope
-        ) != "") {
+                "carriers/imaginationmedia_correios/handling_fee",
+                $this->storeScope
+            ) != "") {
             if (is_numeric($this->scopeConfig->getValue(
                 "carriers/imaginationmedia_correios/handling_fee",
                 $this->storeScope
@@ -261,9 +281,9 @@ class Data extends AbstractHelper
         if ((bool)$isOffline === true) {
             $addDeliveryDays = 0;
         }
-        $ratingsCollection = array();
+        $ratingsCollection = [];
         foreach ($urlsArray as $url_d) {
-            $xml=null;
+            $xml = null;
             try {
                 $ch = curl_init();
                 curl_setopt($ch, CURLOPT_URL, $url_d);
@@ -277,14 +297,14 @@ class Data extends AbstractHelper
                     $xml = new \SimpleXMLElement($content);
                 }
             } catch (\Exception $e) {
-                $this->logMessage("Error in consult XML: ".$e->getMessage());
+                $this->logMessage("Error in consult XML: " . $e->getMessage());
                 continue;
             }
-            if ($xml!=null) {
+            if ($xml != null) {
                 foreach ($xml->cServico as $servico) {
                     if ((float)$servico->Valor > 0) {
                         try {
-                            $data = array();
+                            $data = [];
                             if (!$showDeliveryDays) {
                                 $data['servico'] = $this->getMethodName($servico->Codigo);
                             } else {
@@ -296,13 +316,13 @@ class Data extends AbstractHelper
                             }
                             $data['valor'] = str_replace(",", ".", $servico->Valor) + $handlingFee;
                             $data['prazo'] = $servico->PrazoEntrega + $addDeliveryDays;
-                            $data['servico_codigo'] = $servico->Codigo;
+                            $data['servico_codigo'] = (string)$servico->Codigo;
                             array_push($ratingsCollection, $data);
                             if ($servico->MsgErro != "") {
                                 $this->logMessage("Error on helper line165: " . $servico->MsgErro);
                             }
                         } catch (\Exception $ex) {
-                            $this->logMessage("Error in consult XML2: ".$ex->getMessage());
+                            $this->logMessage("Error in consult XML2: " . $ex->getMessage());
                         }
                     } else {
                         $this->logMessage("Error in consult XML3: Value is zero. The service is not availble to this shipping");
@@ -383,10 +403,10 @@ class Data extends AbstractHelper
     {
         $result = $weight;
         if (((string)$this->scopeConfig->getValue(
-            "carriers/imaginationmedia_correios/weight_type",
-            $this->storeScope
-        ) === 'gr')) {
-            $result = number_format($weight/1000, 2, '.', '');
+                "carriers/imaginationmedia_correios/weight_type",
+                $this->storeScope
+            ) === 'gr')) {
+            $result = number_format($weight / 1000, 2, '.', '');
         }
         return $result;
     }
@@ -411,12 +431,13 @@ class Data extends AbstractHelper
     /**
      * @param $quote
      * @return int|string
+     * @throws \Magento\Framework\Exception\LocalizedException
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
     public function getCubicWeight($quote)
     {
         $cubicWeight = 0;
-        $items = $quote->getAllVisibleItems();
+        $items = [];
         $maxH = 90;
         $minH = 2;
         $maxW = 90;
@@ -425,6 +446,16 @@ class Data extends AbstractHelper
         $minD = 11;
         $sumMax = 160;
         $coefficient = 6000;
+
+        if ($this->appState->getAreaCode() === "adminhtml" && $this->backendSessionQuote->isSessionExists()) {
+            //shipping quotation request from backend (internal order, from the admin panel)
+            $quote = $this->backendSessionQuote->getQuote();
+            $items = $quote->getAllVisibleItems();
+        } else {
+            //shipping quotation request from frontend
+            $items = $quote->getAllVisibleItems();
+        }
+
         $validate = (bool)$this->scopeConfig->getValue(
             'carriers/imaginationmedia_correios/validate_dimensions',
             $this->storeScope
@@ -447,7 +478,7 @@ class Data extends AbstractHelper
 
             if ($validate && ($height > $maxH || $height < $minH || $depth > $maxD ||
                     $depth < $minD || $width > $maxW || $width < $minW ||
-                    ($height+$depth+$width) > $sumMax)) {
+                    ($height + $depth + $width) > $sumMax)) {
                 $this->logMessage("Invalid Product Dimensions");
                 return 0;
             }
@@ -566,90 +597,7 @@ class Data extends AbstractHelper
         } catch (\Exception $ex) {
             $this->logMessage($ex->getMessage());
         }
-        return array($updated,$errors);
-    }
-
-    /**
-     * @param (int)$methods
-     * @return array
-     */
-    public function getPostMethodCodes($methods)
-    {
-        $arrayMethods = array();
-        foreach ($methods as $method) {
-            if ((int)$method === 4162 || (int)$method === 40010) {
-                if ($this->scopeConfig->getValue(
-                    'correios_postingmethods_config/settings/sedex',
-                    $this->storeScope
-                ) != "") {
-                    $arrayMethods[] = (string)$this->scopeConfig->getValue(
-                        'correios_postingmethods_config/settings/sedex',
-                        $this->storeScope
-                    );
-                } else {
-
-                    if((int)$method === 4162) {
-                        $method = '0'.$method;
-                    }
-
-                    $arrayMethods[] = $method;
-                }
-            } elseif ((int)$method===41106 || (int)$method===4669) {
-                if ($this->scopeConfig->getValue(
-                    'correios_postingmethods_config/settings/pac',
-                    $this->storeScope
-                ) != "") {
-                    $arrayMethods[] = (string)$this->scopeConfig->getValue(
-                        'correios_postingmethods_config/settings/pac',
-                        $this->storeScope
-                    );
-                } else {
-
-                    if((int)$method === 4669) {
-                        $method = '0'.$method;
-                    }
-
-                    $arrayMethods[] = $method;
-                }
-            } elseif ((int)$method===40215) {
-                if ($this->scopeConfig->getValue(
-                    'correios_postingmethods_config/settings/sedex10',
-                    $this->storeScope
-                ) != "") {
-                    $arrayMethods[] = (string)$this->scopeConfig->getValue(
-                        'correios_postingmethods_config/settings/sedex10',
-                        $this->storeScope
-                    );
-                } else {
-                    $arrayMethods[] = (int)$method;
-                }
-            } elseif ((int)$method===40290) {
-                if ($this->scopeConfig->getValue(
-                    'correios_postingmethods_config/settings/sedex_hoje',
-                    $this->storeScope
-                ) != "") {
-                    $arrayMethods[] = (string)$this->scopeConfig->getValue(
-                        'correios_postingmethods_config/settings/sedex_hoje',
-                        $this->storeScope
-                    );
-                } else {
-                    $arrayMethods[] = (int)$method;
-                }
-            } elseif ((int)$method===40045) {
-                if ($this->scopeConfig->getValue(
-                    'correios_postingmethods_config/settings/sedex_cobrar',
-                    $this->storeScope
-                ) != "") {
-                    $arrayMethods[] = (string)$this->scopeConfig->getValue(
-                        'correios_postingmethods_config/settings/sedex_cobrar',
-                        $this->storeScope
-                    );
-                } else {
-                    $arrayMethods[] = (int)$method;
-                }
-            }
-        }
-        return $arrayMethods;
+        return [$updated, $errors];
     }
 
     /**
@@ -684,7 +632,7 @@ class Data extends AbstractHelper
             curl_close($ch);
             return $result;
         } catch (\Exception $ex) {
-            $this->logMessage("Error making a curl call: ".$ex->getMessage());
+            $this->logMessage("Error making a curl call: " . $ex->getMessage());
             return null;
         }
     }
@@ -695,14 +643,7 @@ class Data extends AbstractHelper
      */
     public function getPacCodes()
     {
-        $pac = array(41106, 4669);
-        $customPAC = (string)$this->scopeConfig->getValue(
-            'correios_postingmethods_config/settings/pac',
-            $this->storeScope
-        );
-        if ($customPAC !== null && $customPAC !== "") {
-            $pac[] = $customPAC;
-        }
+        $pac = [41106, 4669];
         return $pac;
     }
 }

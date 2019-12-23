@@ -40,7 +40,7 @@ if (!file_exists($backupDirectory)) {
         print $notification;
         exit(UPDATE_CRON_EXIT_WITH_ERROR);
     }
-    chmod($backupDirectory, 0755);
+    chmod($backupDirectory, 0770);
 }
 
 try {

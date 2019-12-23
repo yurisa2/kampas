@@ -6,8 +6,9 @@
  * Correios Shipping Method for Magento 2.
  *
  * @package ImaginationMedia\Correios
- * @author Igor Ludgero Miura <igor@imaginemage.com>
- * @copyright Copyright (c) 2017 Imagination Media (http://imaginemage.com/)
+ * @author Igor Ludgero Miura <igor@imaginationmedia.com>
+ * @author Douglas Ianitsky <ianitsky@gmail.com>
+ * @copyright Copyright (c) 2017-2019 Imagination Media (https://www.imaginationmedia.com/)
  * @license https://opensource.org/licenses/OSL-3.0.php Open Software License 3.0
  */
 -->
@@ -29,5 +30,10 @@
                 <max_weight>30</max_weight>
             </correios>
         </carriers>
+        <correios_postingmethods_config>
+            <settings>
+                <methods><![CDATA[{"_1537631079729_729":{"code":"40010","name":"Sedex"},"_1537631089209_209":{"code":"04162","name":"Sedex com contrato"},"_1537631097535_535":{"code":"41106","name":"PAC"},"_1537631104549_549":{"code":"04669","name":"PAC com contrato"},"_1537631113849_849":{"code":"40215","name":"Sedex 10"},"_1537631121853_853":{"code":"40290","name":"Sedex hoje"},"_1537631135489_489":{"code":"40045","name":"Sedex a cobrar"}}]]></methods>
+            </settings>
+        </correios_postingmethods_config>
     </default>
 </config>

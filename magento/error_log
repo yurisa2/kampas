@@ -1,467 +1,55 @@
-[08-Jan-2019 17:47:15 UTC] PHP Fatal error:  Uncaught TypeError: strpos() expects parameter 1 to be string, null given in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Filesystem/DirectoryResolver.php:56
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Filesystem/DirectoryResolver.php(56): strpos(NULL, '/home/slftgear7...')
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-cms/Controller/Adminhtml/Wysiwyg/Images/Upload.php(55): Magento\Framework\App\Filesystem\DirectoryResolver->validatePath(NULL, 'media')
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Cms/Controller/Adminhtml/Wysiwyg/Images/Upload/Interceptor.php(24): Magento\Cms\Controller\Adminhtml\Wysiwyg\Images\Upload->execute()
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Action/Action.php(108): Magento\Cms\Controller\Adminhtml\Wysiwyg\Images\Upload\Interceptor->execute()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/module-backend/App/AbstractAction.php(231): Magento\Framework\App\Action\Ac in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Filesystem/DirectoryResolver.php on line 56
-[08-Jan-2019 17:48:31 UTC] PHP Fatal error:  Uncaught TypeError: strpos() expects parameter 1 to be string, null given in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Filesystem/DirectoryResolver.php:56
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Filesystem/DirectoryResolver.php(56): strpos(NULL, '/home/slftgear7...')
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-cms/Controller/Adminhtml/Wysiwyg/Images/Upload.php(55): Magento\Framework\App\Filesystem\DirectoryResolver->validatePath(NULL, 'media')
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Cms/Controller/Adminhtml/Wysiwyg/Images/Upload/Interceptor.php(24): Magento\Cms\Controller\Adminhtml\Wysiwyg\Images\Upload->execute()
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Action/Action.php(108): Magento\Cms\Controller\Adminhtml\Wysiwyg\Images\Upload\Interceptor->execute()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/module-backend/App/AbstractAction.php(231): Magento\Framework\App\Action\Ac in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Filesystem/DirectoryResolver.php on line 56
-[08-Jan-2019 19:35:29 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The directory "/home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Model" cannot be deleted Warning!rmdir(/home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Model): Directory not empty in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php:414
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Directory/Write.php(186): Magento\Fr in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php on line 414
-[08-Jan-2019 19:36:50 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The directory "/home/slftgear7mvo/public_html/loja/generated/code/Magento/Framework" cannot be deleted Warning!rmdir(/home/slftgear7mvo/public_html/loja/generated/code/Magento/Framework): Directory not empty in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php:414
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php(407): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Directory/Write.php(186): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Code/GeneratedFiles.php(87): Magento\Framework\File in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/Driver/File.php on line 414
-[08-Jan-2019 19:56:19 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 135168 bytes) in /home/slftgear7mvo/public_html/loja/setup/src/Magento/Setup/Module/Di/Code/Reader/FileClassScanner.php on line 81
-[09-Jan-2019 12:04:54 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 32768 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/module-reports/Controller/Adminhtml/Report/Sales/Tax.php on line 1
-[09-Jan-2019 12:15:57 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /home/slftgear7mvo/public_html/loja/vendor/oyejorge/less.php/lib/Less/Visitor/processExtends.php on line 419
-[09-Jan-2019 12:29:44 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 36864 bytes) in /home/slftgear7mvo/public_html/loja/vendor/composer/ClassLoader.php on line 95
-[09-Jan-2019 12:57:12 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /home/slftgear7mvo/public_html/loja/vendor/oyejorge/less.php/lib/Less/Tree/Selector.php on line 103
-[09-Jan-2019 13:03:19 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 69632 bytes) in /home/slftgear7mvo/public_html/loja/setup/src/Magento/Setup/Module/Di/Code/Reader/FileClassScanner.php on line 81
-[09-Jan-2019 18:05:08 UTC] PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Wishlist\Controller\WishlistProviderInterface in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Wishlis...')
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Wishlis...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Wishlis...', NULL, 'wishlistProvide...', 'Magento\\Wishlis...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\Abstra in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php on line 50
-[09-Jan-2019 18:05:34 UTC] PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Wishlist\Controller\WishlistProviderInterface in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Wishlis...')
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Wishlis...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Wishlis...', NULL, 'wishlistProvide...', 'Magento\\Wishlis...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\Abstra in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php on line 50
-[09-Jan-2019 18:07:18 UTC] PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Wishlist\Controller\WishlistProviderInterface in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php:116
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Compiled.php(108): Magento\Framework\ObjectManager\Factory\AbstractFactory->createObject('Magento\\Wishlis...', Array)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Compiled.php(150): Magento\Framework\ObjectManager\Factory\Compiled->create('Magento\\Wishlis...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Compiled.php(79): Magento\Framework\ObjectManager\Factory\Compiled->get('Magento\\Wishlis...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Compiled.php(150): Magento\Framework\ObjectManager\Factory\Compiled->create('Magento\\Wishlis...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/ in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 116
-[09-Jan-2019 19:18:22 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /home/slftgear7mvo/public_html/loja/vendor/oyejorge/less.php/lib/Less/Visitor/processExtends.php on line 445
-[10-Jan-2019 13:11:00 UTC] PHP Fatal error:  Uncaught Error: Cannot instantiate abstract class Plazathemes\Testimonial\Controller\Index\Index in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php:116
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Compiled.php(108): Magento\Framework\ObjectManager\Factory\AbstractFactory->createObject('Plazathemes\\Tes...', Array)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/ObjectManager.php(56): Magento\Framework\ObjectManager\Factory\Compiled->create('Plazathemes\\Tes...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ActionFactory.php(44): Magento\Framework\ObjectManager\ObjectManager->create('Plazathemes\\Tes...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Router/Base.php(304): Magento\Framework\App\ActionFactory->create('Plazathemes\\Tes...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/Router/Base.php(16 in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 116
-[10-Jan-2019 22:40:25 UTC] PHP Fatal error:  Class Rede\Adquirencia\Model\Rede\Interceptor may not inherit from final class (Rede\Adquirencia\Model\Rede) in /home/slftgear7mvo/public_html/loja/generated/code/Rede/Adquirencia/Model/Rede/Interceptor.php on line 7
-[10-Jan-2019 23:02:49 UTC] PHP Fatal error:  Class Rede\Adquirencia\Model\Rede\Interceptor may not inherit from final class (Rede\Adquirencia\Model\Rede) in /home/slftgear7mvo/public_html/loja/generated/code/Rede/Adquirencia/Model/Rede/Interceptor.php on line 7
-[10-Jan-2019 23:19:28 UTC] PHP Warning:  require(/home/slftgear7mvo/public_html/loja/vendor/composer/../emizentech/categorywidget/registration.php): failed to open stream: No such file or directory in /home/slftgear7mvo/public_html/loja/vendor/composer/autoload_real.php on line 70
-[10-Jan-2019 23:19:28 UTC] PHP Warning:  require(/home/slftgear7mvo/public_html/loja/vendor/composer/../emizentech/categorywidget/registration.php): failed to open stream: No such file or directory in /home/slftgear7mvo/public_html/loja/vendor/composer/autoload_real.php on line 70
-[10-Jan-2019 23:19:28 UTC] PHP Fatal error:  require(): Failed opening required '/home/slftgear7mvo/public_html/loja/vendor/composer/../emizentech/categorywidget/registration.php' (include_path='/home/slftgear7mvo/public_html/loja/vendor/magento/zendframework1/library:.:/opt/alt/php72/usr/share/pear') in /home/slftgear7mvo/public_html/loja/vendor/composer/autoload_real.php on line 70
-[10-Jan-2019 23:33:42 UTC] PHP Fatal error:  Class Rede\Adquirencia\Model\Rede\Interceptor may not inherit from final class (Rede\Adquirencia\Model\Rede) in /home/slftgear7mvo/public_html/loja/generated/code/Rede/Adquirencia/Model/Rede/Interceptor.php on line 7
-[11-Jan-2019 02:43:55 UTC] PHP Fatal error:  Class Rede\Adquirencia\Model\Rede\Interceptor may not inherit from final class (Rede\Adquirencia\Model\Rede) in /home/slftgear7mvo/public_html/loja/generated/code/Rede/Adquirencia/Model/Rede/Interceptor.php on line 7
-[11-Jan-2019 02:47:10 UTC] PHP Fatal error:  Class Rede\Adquirencia\Model\Rede\Interceptor may not inherit from final class (Rede\Adquirencia\Model\Rede) in /home/slftgear7mvo/public_html/loja/generated/code/Rede/Adquirencia/Model/Rede/Interceptor.php on line 7
-[11-Jan-2019 03:03:58 UTC] PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Wishlist\Controller\WishlistProviderInterface in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php:116
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Compiled.php(108): Magento\Framework\ObjectManager\Factory\AbstractFactory->createObject('Magento\\Wishlis...', Array)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Compiled.php(150): Magento\Framework\ObjectManager\Factory\Compiled->create('Magento\\Wishlis...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Compiled.php(79): Magento\Framework\ObjectManager\Factory\Compiled->get('Magento\\Wishlis...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Compiled.php(150): Magento\Framework\ObjectManager\Factory\Compiled->create('Magento\\Wishlis...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/ in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 116
-[11-Jan-2019 03:05:27 UTC] PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Wishlist\Controller\WishlistProviderInterface in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Wishlis...')
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Wishlis...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Wishlis...', NULL, 'wishlistProvide...', 'Magento\\Wishlis...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\Abstra in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php on line 50
-[11-Jan-2019 04:10:52 UTC] PHP Fatal error:  Class Rede\Adquirencia\Model\Rede\Interceptor may not inherit from final class (Rede\Adquirencia\Model\Rede) in /home/slftgear7mvo/public_html/loja/generated/code/Rede/Adquirencia/Model/Rede/Interceptor.php on line 7
-[14-Jan-2019 15:46:06 UTC] PHP Parse error:  syntax error, unexpected 'http' (T_STRING), expecting ',' or ';' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Layout/templates/html/header.phtml on line 88
-[14-Jan-2019 15:50:54 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Layout/templates/html/footer.phtml on line 3
-[15-Jan-2019 18:00:07 UTC] PHP Parse error:  syntax error, unexpected '$_SERVER' (T_VARIABLE) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Layout/templates/html/header.phtml on line 89
-[16-Jan-2019 15:42:27 UTC] PHP Fatal error:  Uncaught Exception: User Error: Some transactions have not been committed or rolled back in /home/slftgear7mvo/public_html/loja/app/etc/env.php on line 7 in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ErrorHandler.php:61
-Stack trace:
-#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(256, 'Some transactio...', '/home/slftgear7...', 7, Array)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(3955): trigger_error('Some transactio...', 256)
-#2 [internal function]: Magento\Framework\DB\Adapter\Pdo\Mysql->__destruct()
-#3 {main}
-  thrown in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ErrorHandler.php on line 61
-[16-Jan-2019 16:14:32 UTC] PHP Fatal error:  Uncaught Exception: User Error: Some transactions have not been committed or rolled back in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php on line 3955 in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ErrorHandler.php:61
-Stack trace:
-#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(256, 'Some transactio...', '/home/slftgear7...', 3955, Array)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(3955): trigger_error('Some transactio...', 256)
-#2 [internal function]: Magento\Framework\DB\Adapter\Pdo\Mysql->__destruct()
-#3 {main}
-  thrown in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ErrorHandler.php on line 61
-[17-Jan-2019 16:53:31 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Recentproductslider/templates/productslider.phtml on line 52
-[17-Jan-2019 16:53:49 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Recentproductslider/templates/productslider.phtml on line 52
-[17-Jan-2019 18:08:04 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Cms/templates/content-home.phtml on line 26
-[17-Jan-2019 18:37:02 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 37
-[17-Jan-2019 18:38:06 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH), expecting ',' or ';' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 37
-[17-Jan-2019 18:44:29 UTC] PHP Parse error:  syntax error, unexpected '=', expecting variable (T_VARIABLE) or '{' or '$' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 3
-[17-Jan-2019 18:44:52 UTC] PHP Parse error:  syntax error, unexpected '=', expecting variable (T_VARIABLE) or '{' or '$' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 3
-[17-Jan-2019 18:44:55 UTC] PHP Parse error:  syntax error, unexpected '=', expecting variable (T_VARIABLE) or '{' or '$' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Newproductslider/templates/newproductslider.phtml on line 3
-[17-Jan-2019 18:47:50 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 127
-[18-Feb-2019 18:26:02 UTC] PHP Fatal error:  Uncaught TypeError: explode() expects parameter 2 to be string, null given in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Encryption/Encryptor.php:238
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Encryption/Encryptor.php(238): explode(':', NULL, 3)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Encryption/Encryptor.php(205): Magento\Framework\Encryption\Encryptor->explodePasswordHash(NULL)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Encryption/Encryptor.php(197): Magento\Framework\Encryption\Encryptor->isValidHash('123456', NULL)
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/Model/Authentication.php(170): Magento\Framework\Encryption\Encryptor->validateHash('123456', NULL)
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/Model/AccountManagement.php(543): Magento\Customer\Model\Authentication->authenticate('4', '123456')
-#5 /home/slftgear7mvo/public_html/loja/vendor/magento/module- in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Encryption/Encryptor.php on line 238
-[18-Feb-2019 19:15:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:78
+[22-Dec-2019 06:04:44 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Layout/templates/html/header.phtml on line 16
+[22-Dec-2019 06:04:53 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Layout/templates/html/header.phtml on line 16
+[22-Dec-2019 06:20:36 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Plazathemes_Layout/templates/html/header.phtml on line 19
+[22-Dec-2019 07:29:57 UTC] PHP Fatal error:  Uncaught Error: Undefined constant 'Magento\Checkout\Helper\Cart' in /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/view/frontend/templates/form/register.phtml:12
 Stack trace:
 #0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Customer\Block\Form\Register), '/home/slftgear7...', Array)
 #2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHt in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 78
-[18-Feb-2019 19:15:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:78
+#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(1097): Magento\Framework\View\Element\Template->_toHtml()
+#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(1101): Magento\Framework\View\Element\AbstractBlock->Magento\Framework\View\Element in /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/view/frontend/templates/form/register.phtml on line 12
+[22-Dec-2019 07:30:14 UTC] PHP Fatal error:  Uncaught Error: Undefined constant 'Magento\Checkout\Helper\Cart' in /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/view/frontend/templates/form/register.phtml:12
 Stack trace:
 #0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Customer\Block\Form\Register), '/home/slftgear7...', Array)
 #2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHt in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 78
-[18-Feb-2019 19:16:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:78
+#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(1097): Magento\Framework\View\Element\Template->_toHtml()
+#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(1101): Magento\Framework\View\Element\AbstractBlock->Magento\Framework\View\Element in /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/view/frontend/templates/form/register.phtml on line 12
+[22-Dec-2019 07:31:52 UTC] PHP Fatal error:  Uncaught Error: Undefined constant 'Magento\Checkout\Helper\Cart' in /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/view/frontend/templates/form/register.phtml:12
 Stack trace:
 #0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Customer\Block\Form\Register), '/home/slftgear7...', Array)
 #2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHt in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 78
-[18-Feb-2019 19:16:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:78
+#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(1097): Magento\Framework\View\Element\Template->_toHtml()
+#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(1101): Magento\Framework\View\Element\AbstractBlock->Magento\Framework\View\Element in /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/view/frontend/templates/form/register.phtml on line 12
+[22-Dec-2019 07:31:59 UTC] PHP Fatal error:  Uncaught Error: Undefined constant 'Magento\Checkout\Helper\Cart' in /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/view/frontend/templates/form/register.phtml:12
 Stack trace:
 #0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct), '/home/slftgear7...', Array)
+#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Customer\Block\Form\Register), '/home/slftgear7...', Array)
 #2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHtml()
-#5 /hom in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 78
-[18-Feb-2019 19:17:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:78
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHtml()
-#5 /hom in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 78
-[18-Feb-2019 19:17:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:78
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHtml()
-#5 /hom in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 78
-[18-Feb-2019 19:20:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:77
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHt in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:21:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:77
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHt in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:23:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:77
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHt in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:24:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:77
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHt in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:25:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTypeInstance() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:77
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock->toHt in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:27:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getAssociatedProducts() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:77
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:27:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getAssociatedProducts() on null in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml:77
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Block\Product\ListProduct\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(668): Magento\Framework\View\Element\Template->_toHtml()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Element\AbstractBlock in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:29:39 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:29:46 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:29:55 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:31:50 UTC] PHP Parse error:  syntax error, unexpected '$block' (T_VARIABLE) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:32:16 UTC] PHP Parse error:  syntax error, unexpected '$block' (T_VARIABLE) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[18-Feb-2019 19:36:49 UTC] PHP Parse error:  syntax error, unexpected '$block' (T_VARIABLE) in /home/slftgear7mvo/public_html/loja/app/design/frontend/naturecircle/naturecircle_default/Magento_Catalog/templates/product/list.phtml on line 77
-[21-Feb-2019 16:48:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Magento\GroupedProduct\Pricing\Price\FinalPrice::getPriceInfo() in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/ in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 16:48:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Magento\GroupedProduct\Pricing\Price\FinalPrice::getPriceInfo() in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/ in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 16:52:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Magento\GroupedProduct\Pricing\Price\FinalPrice::getPriceInfo() in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/ in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 16:52:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Magento\GroupedProduct\Pricing\Price\FinalPrice::getPriceInfo() in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/ in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 17:19:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(110): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[21-Feb-2019 17:19:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 17:19:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 17:19:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 17:19:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 17:24:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 17:24:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(110): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[21-Feb-2019 17:27:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 17:31:55 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 25
-[21-Feb-2019 17:32:21 UTC] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to Magento\Framework\Pricing\Render\RendererPool::createAmountRender() must implement interface Magento\Framework\Pricing\SaleableInterface or be null, array given, called in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 25 and defined in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/RendererPool.php:99
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml(25): Magento\Framework\Pricing\Render\RendererPool->createAmountRender(Object(Magento\Framework\Pricing\Amount\Base), Array, 0.9, Array)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include('/home/slftgear7...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Mage in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/RendererPool.php on line 99
-[21-Feb-2019 17:33:51 UTC] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to Magento\Framework\Pricing\Render\RendererPool::createAmountRender() must implement interface Magento\Framework\Pricing\SaleableInterface or be null, array given, called in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 25 and defined in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/RendererPool.php:99
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml(25): Magento\Framework\Pricing\Render\RendererPool->createAmountRender(Object(Magento\Framework\Pricing\Amount\Base), Array, Object(Magento\Catalog\Pricing\Price\FinalPrice), Array)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include('/home/slftgear7...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framewor in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/RendererPool.php on line 99
-[21-Feb-2019 17:35:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on array in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(110): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[21-Feb-2019 17:36:08 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 25
-[21-Feb-2019 17:36:19 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 25
-[21-Feb-2019 17:36:34 UTC] PHP Fatal error:  Uncaught TypeError: Argument 3 passed to Magento\Framework\Pricing\Render\RendererPool::createAmountRender() must implement interface Magento\Framework\Pricing\Price\PriceInterface or be null, float given, called in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 25 and defined in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/RendererPool.php:99
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml(25): Magento\Framework\Pricing\Render\RendererPool->createAmountRender(Object(Magento\Framework\Pricing\Amount\Base), Object(Magento\Catalog\Model\Product\Interceptor), 0.9, Array)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include('/home/slftgear7...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framew in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/RendererPool.php on line 99
-[21-Feb-2019 17:37:57 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 20
-[21-Feb-2019 17:38:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on array in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(110): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[21-Feb-2019 17:39:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on array in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(110): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[21-Feb-2019 17:40:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on array in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(110): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[21-Feb-2019 18:29:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on array in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 18:29:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on array in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(110): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[21-Feb-2019 18:29:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on array in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 18:29:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on array in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[21-Feb-2019 18:30:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on array in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/module-msrp/Helper/Data.php(167): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-msrp/Pricing/Price/MsrpPrice.php(101): Magento\Msrp\Helper\Data->isMinimalPriceLessMsrp(Object(Magento\Catalog\Model\Product\Interceptor))
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Pricing/Render/FinalPriceBox.php(105): Magento\Msrp\Pricing\Price\MsrpPrice->isMinimalPriceLessMsrp(Object(Magento\Catalog\Model\Product\Interceptor))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Pricing/Render/FinalPriceBox.php(73): Magento\Catalog\Pricing\Render\FinalPriceBox->isMsrpPriceApplicable()
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock. in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[28-Mar-2019 22:29:49 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ObjectManager/ConfigLoader/Compiled.php on line 31
-[28-Mar-2019 22:29:49 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ObjectManager/ConfigLoader/Compiled.php on line 31
-[28-Mar-2019 22:29:49 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ObjectManager/ConfigLoader/Compiled.php on line 31
-[28-Mar-2019 22:29:53 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ObjectManager/ConfigLoader/Compiled.php on line 31
-[28-Mar-2019 22:29:53 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ObjectManager/ConfigLoader/Compiled.php on line 31
-[28-Mar-2019 22:29:54 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/App/ObjectManager/ConfigLoader/Compiled.php on line 31
-[12-Apr-2019 20:39:17 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The "/home/slftgear7mvo/public_html/loja/vendor/igorludgero/correios/etc/di.xml" file doesn't exist. in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/File/Read.php:76
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/File/Read.php(62): Magento\Framework\Filesystem\File\Read->assertValid()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/File/Read.php(52): Magento\Framework\Filesystem\File\Read->open()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/File/ReadFactory.php(45): Magento\Framework\Filesystem\File\Read->__construct('/home/slftgear7...', Object(Magento\Framework\Filesystem\Driver\File))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Config/FileIterator.php(70): Magento\Framework\Filesystem\File\ReadFactory->create('/home/slftgear7...', 'file')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Confi in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Filesystem/File/Read.php on line 76
-[15-Apr-2019 20:57:43 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 135168 bytes) in /home/slftgear7mvo/public_html/loja/setup/src/Magento/Setup/Module/Di/Code/Reader/FileClassScanner.php on line 81
-[15-Apr-2019 21:13:27 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 135168 bytes) in /home/slftgear7mvo/public_html/loja/setup/src/Magento/Setup/Module/Di/Code/Reader/FileClassScanner.php on line 81
-[15-Apr-2019 21:16:57 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 135168 bytes) in /home/slftgear7mvo/public_html/loja/setup/src/Magento/Setup/Module/Di/Code/Reader/FileClassScanner.php on line 81
-[15-Apr-2019 21:19:50 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 135168 bytes) in /home/slftgear7mvo/public_html/loja/setup/src/Magento/Setup/Module/Di/Code/Reader/FileClassScanner.php on line 81
-[15-Apr-2019 21:55:00 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 36864 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Code/Generator/EntityAbstract.php on line 291
-[18-Apr-2019 20:35:51 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /home/slftgear7mvo/public_html/loja/vendor/oyejorge/less.php/lib/Less/Visitor/extendFinder.php on line 51
-[22-Apr-2019 18:36:19 UTC] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to Magento\Framework\Pricing\Render\RendererPool::createAmountRender() must implement interface Magento\Framework\Pricing\SaleableInterface or be null, instance of Magento\Catalog\Pricing\Price\FinalPrice given, called in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 25 and defined in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/RendererPool.php:99
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml(25): Magento\Framework\Pricing\Render\RendererPool->createAmountRender(Object(Magento\Framework\Pricing\Amount\Base), Object(Magento\Catalog\Pricing\Price\FinalPrice), Array)
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include('/home/slftgear7...')
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Ele in /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/RendererPool.php on line 99
-[22-Apr-2019 19:03:40 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 33
-[22-Apr-2019 19:04:44 UTC] PHP Fatal error:  Allowed memory size of 792723456 bytes exhausted (tried to allocate 400572416 bytes) in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 33
-[22-Apr-2019 19:13:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(109): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[22-Apr-2019 19:13:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[22-Apr-2019 19:13:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[22-Apr-2019 19:13:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[22-Apr-2019 19:14:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[22-Apr-2019 19:14:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
-[22-Apr-2019 19:43:01 UTC] PHP Parse error:  syntax error, unexpected 'price' (T_STRING), expecting ',' or ';' in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 61
-[22-Apr-2019 20:01:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(109): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[22-Apr-2019 20:02:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(109): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[22-Apr-2019 20:03:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php:36
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Price/AbstractPrice.php(101): Magento\GroupedProduct\Pricing\Price\FinalPrice->getValue()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/Listing/Collector/Price.php(91): Magento\Framework\Pricing\Price\AbstractPrice->getAmount()
-#2 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Ui/DataProvider/Product/ProductRenderCollectorComposite.php(37): Magento\Catalog\Ui\DataProvider\Product\Listing\Collector\Price->collect(Object(Magento\Catalog\Model\Product\Interceptor), Object(Magento\Catalog\Model\ProductRender))
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/module-catalog/Model/ProductRenderList.php(109): Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite->collect(Ob in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 36
-[22-Apr-2019 20:05:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getPriceInfo() on float in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml:22
-Stack trace:
-#0 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
-#1 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(271): Magento\Framework\View\TemplateEngine\Php->render(Object(Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor), '/home/slftgear7...', Array)
-#2 /home/slftgear7mvo/public_html/loja/generated/code/Magento/Catalog/Pricing/Render/FinalPriceBox/Interceptor.php(271): Magento\Framework\View\Element\Template->fetchView('/home/slftgear7...')
-#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/Template.php(301): Magento\Catalog\Pricing\Render\FinalPriceBox\Interceptor->fetchView('/home/slftgear7...')
-#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/Pricing/Render/PriceB in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/view/base/templates/product/price/final_price.phtml on line 22
+#3 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(1097): Magento\Framework\View\Element\Template->_toHtml()
+#4 /home/slftgear7mvo/public_html/loja/vendor/magento/framework/View/Element/AbstractBlock.php(1101): Magento\Framework\View\Element\AbstractBlock->Magento\Framework\View\Element in /home/slftgear7mvo/public_html/loja/vendor/magento/module-customer/view/frontend/templates/form/register.phtml on line 12
+[22-Dec-2019 08:18:32 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 08:19:31 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 08:20:16 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 16:12:56 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 16:18:17 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 16:28:12 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 16:28:28 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 16:28:45 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 16:28:59 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 18:29:51 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 18:30:24 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 18:30:50 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 18:30:55 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 20:44:40 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 20:51:43 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 20:53:52 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 20:54:38 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[22-Dec-2019 20:58:10 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[23-Dec-2019 13:54:01 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[23-Dec-2019 15:41:08 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 7
+[23-Dec-2019 17:04:38 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/slftgear7mvo/public_html/loja/vendor/sebwite/magento2-category-sidebar/view/frontend/templates/sidebar.phtml on line 22
+[23-Dec-2019 17:05:41 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/slftgear7mvo/public_html/loja/vendor/sebwite/magento2-category-sidebar/view/frontend/templates/sidebar.phtml on line 26
+[23-Dec-2019 18:13:20 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 9
+[23-Dec-2019 18:14:19 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/slftgear7mvo/public_html/loja/vendor/magento/module-grouped-product/Pricing/Price/FinalPrice.php on line 9

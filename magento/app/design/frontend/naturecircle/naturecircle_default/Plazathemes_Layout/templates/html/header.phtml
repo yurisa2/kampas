@@ -1,15 +1,25 @@
-<?php $block->renderFileLessToCss(); ?>
+﻿<?php $block->renderFileLessToCss(); ?>
+<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+
+$cartUrl = 'https://www.cantinhodasessencias.com.br/loja/checkout/cart/index/';
+$urlRewrite = $this->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true]);
+
+if(isset($cartlogin) && $customerSession->isLoggedIn() ) {
+	header('location:https://www.cantinhodasessencias.com.br/loja/checkout/#shipping');
+ }
+
+ ?>
 <header class="header-container">
 
 		<div class="header">
-			<div class="phone-socialmedia" style="text-align: right; color: #fff; font-size: 16px; padding-right: 10px">
-				<span style="display: inline-block; margin-right: 10px">15 3388-6756 / 3233-8723</span>
-				<a href="#" style="display: inline-block; background-color: #fff; color: #c20e14; width: 22px; height: 22px; text-align: center; line-height: 22px; border-radius: 2px;">
+			<div class="phone-socialmedia" style="text-align: right; color: #fff; font-size: 16px;">
+				<span style="display: inline-block; margin-right: 10px;font-size:12px;" >15 3388-6756 / 3233-8723</span>
+				<a href="https://www.facebook.com/cantinhodasessenciassorocaba/" style="display: inline-block; background-color: #fff; color: #c20e14; width: 22px; height: 22px; text-align: center; line-height: 22px; border-radius: 2px;" target="_blank" rel="noopener" rel="noopener noreferrer">
 					<i class="fa fa-facebook"></i>
 				</a>
-				<a href="#" style="display: inline-block; background-color: #fff; color: #c20e14; width: 22px; height: 22px; text-align: center; line-height: 22px; border-radius: 2px;">
-					<i class="fa fa-instagram"></i
-				></a>
+				<a target="_blank" href="https://www.instagram.com/cantinhodasessencias/" style="display: inline-block; background-color: #fff; color: #c20e14; width: 22px; height: 22px; text-align: center; line-height: 22px; border-radius: 2px;"  rel="noopener" rel="noopener noreferrer">
+					<i class="fa fa-instagram"></i></a>
 			</div>
 
 			<div class="h-right">
@@ -19,11 +29,27 @@
 
 				<div class="absolute">
 					<div class="search-switcher">
-						<?php echo $this->getChildHtml("top.search"); ?>
+<div id="minisearch" class="search_mini_form">
+            <form class="form minisearch" id="search_mini_form" action="http://www.cantinhodasessencias.com.br/loja/catalogsearch/result/" method="get">
+		    <div class="field search">
+			    <input id="search" class="input-text col-xs-10" data-mage-init="{&quot;quickSearch&quot;:{
+						&quot;formSelector&quot;:&quot;#search_mini_form&quot;,
+						&quot;url&quot;:&quot;http://www.cantinhodasessencias.com.br/loja/search/ajax/suggest/&quot;,
+						&quot;destinationSelector&quot;:&quot;#search_autocomplete&quot;}
+				   }" type="text" name="q" value="" placeholder="O que você procura?" class="input-text" maxlength="128" role="combobox" aria-haspopup="false" aria-autocomplete="both" aria-expanded="true" autocomplete="off">
+
+
+			    <button type="submit" class="minisearch-button col-xs-2" title="Pesquisa" class="action fa fa-search">
+				<span>BUSCAR</span>
+			    </button>
+            </div>
+	    </form>
+    </div>
+
 					</div>
 					<div class="link-hover">
 						<p class="icon">
-						<span class="welcome">Bem-Vindo<br />Fazer Login</span>        
+						<span class="welcome">Bem-Vindo<br />Fazer Login</span>
 						</p>
 
 						<div>
@@ -37,11 +63,11 @@
 
 						</div>
 					</div>
-					<?php echo $this->getChildHtml("minicart");?>
+                        <?php echo $this->getChildHtml("minicart");?>
 				</div>
 			</div>
 			<div class="h-left">
-                <div class="col-xs-11 col-sm-11">
+                <div class="menu-1 col-xs-11 col-sm-11">
 				    <?php echo $this->getChildHtml("hozmegamenu_top"); ?>
 				    <?php
 				    echo $this->getLayout()
@@ -67,6 +93,87 @@
 				<?php echo $this->getChildHtml("mobilemenu"); ?>
 			</div>
 		</div>
+        <!--<div id="minisearch" class="search_mini_form hidden-md hidden-lg">
+            <form class="form minisearch" id="search_mini_form" action="http://www.cantinhodasessencias.com.br/loja/catalogsearch/result/" method="get">
+		    <div class="field search">
+			    <input id="search" class="input-text col-xs-10" data-mage-init="{&quot;quickSearch&quot;:{
+						&quot;formSelector&quot;:&quot;#search_mini_form&quot;,
+						&quot;url&quot;:&quot;http://www.cantinhodasessencias.com.br/loja/search/ajax/suggest/&quot;,
+						&quot;destinationSelector&quot;:&quot;#search_autocomplete&quot;}
+				   }" type="text" name="q" value="" placeholder="O que você procura?" class="input-text" maxlength="128" role="combobox" aria-haspopup="false" aria-autocomplete="both" aria-expanded="true" autocomplete="off">
+
+
+			    <button type="submit" class="minisearch-button col-xs-2" title="Pesquisa" class="action fa fa-search">
+				<span></span>
+			    </button>
+            </div>
+	    </form>
+    </div>-->
+    <div class="storefront-mobile hidden-md hidden-lg">
+					<div class="search-mobile col-xs-4">
+						<button class="search-button" onclick="myFunction()"></button>
+					</div>
+					<div class="link-hover col-xs-4">
+						<a class="my-account" href="http://www.cantinhodasessencias.com.br/loja/customer/account/">
+                            <p class="icon col-xs-4">
+						        <span class="welcome">Bem-Vindo<br>Fazer Login</span>
+						    </p>
+                        </a>
+						<!--<div>
+
+							<div class="my-acount">
+								<strong class="label"><span>Minha Conta</span></strong>
+								<ul class="header links"><li><a href="http://www.cantinhodasessencias.com.br/loja/customer/account/">Minha Conta</a></li><li class="link wishlist" data-bind="scope: 'wishlist'">
+    <a href="http://www.cantinhodasessencias.com.br/loja/wishlist/">Minha Lista de Desejos
+        <span data-bind="text: wishlist().counter" class="counter qty"></span>
+    </a>
+</li>-->
+<script>
+var screenWidth = screen.width;
+var x = document.getElementById("minisearch");
+if(screenWidth > 500) {
+    x.style.display = "block";
+} else {
+    x.style.display = "none";
+}
+function myFunction() {
+  var x = document.getElementById("minisearch");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            }
+        }
+    }
+
+</script>
+<!--<li class="authorization-link" data-label="ou">
+    <a href="http://www.cantinhodasessencias.com.br/loja/customer/account/login/referer/aHR0cDovL3d3dy5jYW50aW5ob2Rhc2Vzc2VuY2lhcy5jb20uYnIvbG9qYS8%2C/">
+        Entrar    </a>
+</li>
+</ul>							</div>
+
+
+						</div>-->
+					</div>
+
+<div class="minicart-icon col-xs-4">
+    <a class="link-minicart" href="http://www.cantinhodasessencias.com.br/loja/checkout/cart/"></a>
+</div>
+
 </header>
 <script type="text/javascript">
 require(["jquery"], function($){
@@ -89,11 +196,10 @@ require(["jquery"], function($){
 	});
 });
 </script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v4.0"></script>
 <?php
-if ('/loja/index.php' || '/loja/home' || '/loja/' == $_SERVER["REQUEST_URI"]) {
+if ('/loja/index.php' == $_SERVER["REQUEST_URI"] || '/loja/home' == $_SERVER["REQUEST_URI"] || '/loja/' == $_SERVER["REQUEST_URI"]) {
     echo '<img src="http://www.cantinhodasessencias.com.br/loja/pub/media/wysiwyg/banner_header.jpg" alt="" style="width: 100%;">';
 }
 ?>
-
-
-

@@ -24,12 +24,7 @@ define([
                     paymentMethod: ko.observable(),
                     totals: ko.observable({
                         'base_grand_total': 0
-                    }),
-
-                    /** Stub */
-                    isVirtual: function () {
-                        return false;
-                    }
+                    })
                 },
                 'Magento_Braintree/js/view/payment/adapter': {
                     config: {},

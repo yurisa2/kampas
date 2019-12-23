@@ -6,8 +6,8 @@
  * Correios Shipping Method for Magento 2.
  *
  * @package ImaginationMedia\Correios
- * @author Igor Ludgero Miura <igor@imaginemage.com>
- * @copyright Copyright (c) 2017 Imagination Media (http://imaginemage.com/)
+ * @author Igor Ludgero Miura <igor@imaginationmedia.com>
+ * @copyright Copyright (c) 2017 Imagination Media (https://www.imaginationmedia.com/)
  * @license https://opensource.org/licenses/OSL-3.0.php Open Software License 3.0
  */
 
@@ -207,7 +207,6 @@ class CotacoesRepository implements CotacoesInterface
         $postingMethods = explode(",", $this->scopeConfig->getValue(
             'carriers/imaginationmedia_correios/posting_methods'
         ));
-        $postingMethods = $this->helper->getPostMethodCodes($postingMethods);
         if ($this->cotacoesFactory->create()->getCollection()->count() > 0) {
             $this->helper->logMessage("Can't populate because the db isn't empty. First you to clear the db.");
             return false;

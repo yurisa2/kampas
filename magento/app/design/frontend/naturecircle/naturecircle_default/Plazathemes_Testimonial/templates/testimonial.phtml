@@ -4,7 +4,7 @@
 
  * @author PlazaThemes Team <contact@plazathemes.com>
  */
- 
+
 if($this->getConfig('enable_frontend')):
 $testimonials = $this->getTestimonial();
 ?>
@@ -45,50 +45,50 @@ $testimonials = $this->getTestimonial();
 			<?php $url_image = $this->getMediaFolder().$testimonial['avatar']; ?>
 			<li class="pt-testimonial testithumb<?php echo $i.' ';if($i == 0) echo 'active'; $i++; ?>">
 				<img class="img-circle" style="width:100%;height:100%;" alt="<?php echo $testimonial['name'] ?>" src="<?php echo $url_image; ?>"/>
-				
+
 			</li>
-			
+
 		<?php endforeach; ?>
 	</ul>
 	<?php $i = 0; ?>
-	<div class="owl-container">	
-	   <ul class="ptowl"> 
-		<?php foreach ($testimonials as $testimonial): ?>	
+	<div class="owl-container">
+	   <ul class="ptowl">
+		<?php foreach ($testimonials as $testimonial): ?>
 			<?php $url_image = $this->getMediaFolder().$testimonial['avatar']; ?>
-			
+
 			<?php if($i < $qty): ?>
 				<?php if($i%$rows == 0): ?>
 					<li>
 				<?php endif; ?>
 					<div class="pt-testimonial">
-						
+
 						<div style="max-width:650px;padding-top:inherit;" class="des">
-                            <img style="position:relative;top:-0.7vw;left:-1vw;" class="start-bg" src="http://www.cantinhodasessencias.com.br/loja/pub/static/version1547179918/frontend/naturecircle/naturecircle_default/pt_BR/images/start_testimol.png">
+                            <img style="position:relative;top:-3.517px;left:-1vw;" class="start-bg" src="http://www.cantinhodasessencias.com.br/loja/pub/media/wysiwyg/abre_aspas.png">
                             <a href="<?php echo $this->getUrl('testimonial'); ?>"><?php if($testimonial['testimonial'] && $show_description) echo __($testimonial['testimonial']); ?></a>
-                        </div> 
-						
+                        </div>
+
 						<!-- <div class="email"><?php echo $testimonial['email']; ?></div> -->
 						<div style="height:3vw;" class="info">
 							<a href="<?php echo $this->getUrl('testimonial'); ?>" class="name">
-								<?php echo $testimonial['name']; ?>, 
-								<span class="job"><?php echo $testimonial['job']; ?></span><img style="position:relative;right:-18vw;bottom:-0.8vw;" class="end-bg" src="http://www.cantinhodasessencias.com.br/loja/pub/static/version1547179918/frontend/naturecircle/naturecircle_default/pt_BR/images/end_testimol.png">
+								<?php echo $testimonial['name']; ?>,
+								<span class="job"><?php echo $testimonial['job']; ?></span><img style="position:relative;right:-18vw;bottom:-0.8vw;" class="end-bg" src="http://www.cantinhodasessencias.com.br/loja/pub/media/wysiwyg/fecha_aspas.png">
 							</a>
-							
+
 						</div>
 					</div>
 				<?php if($i%$rows == ($rows - 1)): ?>
-					</li>  
-				<?php endif; ?>    
+					</li>
+				<?php endif; ?>
 			<?php endif; ?>
-			<?php $i++; ?> 
+			<?php $i++; ?>
 		<?php endforeach; ?>
 			<?php if($i%$rows != $rows): ?>
-				
-			<?php endif; ?>  
+
+			<?php endif; ?>
 		</ul>
 	</div>
-	
-	
+
+
 </div>
 </div>
 <script type="text/javascript">
@@ -125,14 +125,14 @@ require([
 					$(testithumb).addClass('active');
 				}
 			});
-			
+
 			var owlslider = $(".pt-testimonial-container .ptowl").data('owlCarousel');
-			
+
 			function testislider(x)
 			{
 				owlslider.goTo(x)
 			}
-			
+
 			$('.thumb .pt-testimonial').click(function(){
 				testislider($( ".thumb .pt-testimonial" ).index( this ));
 			});

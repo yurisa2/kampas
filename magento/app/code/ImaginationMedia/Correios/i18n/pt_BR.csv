@@ -93,3 +93,5 @@
 "Only Online","Somente Online"
 "Correios Post Method Codes","Códigos dos Correios"
 "Here you can customize the shipping message. An example is: '%s - %d days to receive.'. %s is the shipping method and %d is the days number.","Você pode customizar a mensagem do método. Um exemplo é: '%s - entrega em %d dias úteis.' O valor '%s' é usado para mostrar o nome do método (PAC, SEDEX etc), e o valor '%d' é a quantiade de dias."
+"Code","Código"
+"Name","Nome"

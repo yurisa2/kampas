@@ -2,7 +2,7 @@
   "name": "imaginationmedia/correios",
   "description": "Correios shipping method integration for Magento 2.x",
   "type": "magento2-module",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "license": [
     "OSL-3.0",
     "AFL-3.0"
@@ -12,7 +12,7 @@
   "authors": [
     {
       "name": "Igor Ludgero Miura",
-      "email": "igor@imaginemage.com",
+      "email": "igor@imaginationmedia.com",
       "homepage": "http://www.imaginationmedia.com.br/",
       "role": "Developer"
     }

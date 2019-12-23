@@ -19,12 +19,7 @@ define([
                     billingAddress: ko.observable(),
                     shippingAddress: ko.observable(),
                     paymentMethod: ko.observable(),
-                    totals: ko.observable({}),
-
-                    /** Stub */
-                    isVirtual: function () {
-                        return false;
-                    }
+                    totals: ko.observable({})
                 },
                 'Magento_Braintree/js/view/payment/validator-handler': jasmine.createSpyObj(
                     'validator-handler',

@@ -1,0 +1,99 @@
+<?php $block->renderFileLessToCss(); ?>
+<header class="header-container">
+
+		<div class="header">
+			<div class="phone-socialmedia" style="text-align: right; color: #fff; font-size: 16px; padding-right: 10px">
+				<span style="display: inline-block; margin-right: 10px">15 3388-6756 / 3233-8723</span>
+				<a href="#" style="display: inline-block; background-color: #fff; color: #c20e14; width: 22px; height: 22px; text-align: center; line-height: 22px; border-radius: 2px;">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a href="#" style="display: inline-block; background-color: #fff; color: #c20e14; width: 22px; height: 22px; text-align: center; line-height: 22px; border-radius: 2px;">
+					<i class="fa fa-instagram"></i
+				></a>
+			</div>
+
+			<div class="h-right">
+				<?php // echo $this->getChildHtml("logo"); ?>
+				<a href="http://cantinhodasessencias.com.br/loja/"><img src="http://cantinhodasessencias.com.br/loja/logocantinho.png"></a>
+
+
+				<div class="absolute">
+					<div class="search-switcher">
+						<?php echo $this->getChildHtml("top.search"); ?>
+					</div>
+					<div class="link-hover">
+						<p class="icon">
+						<span class="welcome">Bem-Vindo<br />Fazer Login</span>        
+						</p>
+
+						<div>
+							<?php echo $this->getChildHtml("store_language"); ?>
+							<div class="my-acount">
+								<strong class="label"><span><?php /* @escapeNotVerified */ echo __('My Account') ?></span></strong>
+								<?php echo $this->getChildHtml("top.links"); ?>
+							</div>
+							<?php echo $this->getChildHtml("currency"); ?>
+
+
+						</div>
+					</div>
+					<?php echo $this->getChildHtml("minicart");?>
+				</div>
+			</div>
+			<div class="h-left">
+                <div class="col-xs-11 col-sm-11">
+				    <?php echo $this->getChildHtml("hozmegamenu_top"); ?>
+				    <?php
+				    echo $this->getLayout()
+				    ->createBlock('Magento\Cms\Block\Block')
+				    ->setBlockId('pt_menu_links1')
+				    ->toHtml();
+				    ?>
+                </div>
+                <div class="col-xs-1 col-sm-1 nav-ozmegamenu-inner">
+			        <div class="mobile-bar-icon"><span><?php /* @escapeNotVerified */ echo __('mobile icon'); ?></span></div>
+		        </div>
+			</div>
+		</div>
+        <!--<div class="nav-ozmegamenu-inner">
+			<div class="mobile-bar-icon"><span><?php /* @escapeNotVerified */ echo __('mobile icon'); ?></span></div>
+		</div>-->
+		<div class="mobile-bar-content">
+			<div class ="mobile-bar-close"><?php /* @escapeNotVerified */ echo __('Close'); ?></div>
+			<ul class = "tabs-mobile">
+				<li class="item item-menu"><?php /* @escapeNotVerified */ echo __('Menu'); ?></li>
+			</ul>
+			<div class="tabs-content-mobile tabs-menu">
+				<?php echo $this->getChildHtml("mobilemenu"); ?>
+			</div>
+		</div>
+</header>
+<script type="text/javascript">
+require(["jquery"], function($){
+	$(document).ready(function(){
+		<!-- show, hide mobile bar content -->
+		$(".mobile-bar-icon").click(function(){
+			$(".mobile-bar-content").addClass("open");
+		});
+		$(".mobile-bar-close").click(function(){
+			$(".mobile-bar-content").removeClass("open");
+		});
+
+	});
+	$(window).scroll(function () {
+	   if ($(this).scrollTop() > 0) {
+		 $('.header-container').addClass("fix-header-container");
+	   } else {
+		$('.header-container').removeClass("fix-header-container");
+	   }
+	});
+});
+</script>
+<?php
+if ('/loja/index.php' || '/loja/home' || '/loja/' == $_SERVER["REQUEST_URI"]) {
+    echo '<img src="http://www.cantinhodasessencias.com.br/loja/pub/media/wysiwyg/banner_header.jpg" alt="" style="width: 100%;">';
+}
+?>
+
+
+

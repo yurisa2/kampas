@@ -156,6 +156,7 @@ switch ($type = $block->getType()) {
     case 'other':
     break;
 }
+echo json_encode($exist);
 ?>
 
 <?php if ($exist):?>
@@ -228,6 +229,12 @@ switch ($type = $block->getType()) {
 														<button class="action tocart primary" data-mage-init='{"redirectUrl": {"url": "<?php /* @escapeNotVerified */ echo $block->getAddToCartUrl($_item) ?>"}}' type="button" title="<?php /* @escapeNotVerified */ echo __('COMPRAR') ?>">
 															<span><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
 														</button>
+                            <a class="product-item-link" href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>">
+                                                                   <button type="submit"
+                           												title="<?php echo $block->escapeHtml(__('Detalhes')); ?>"
+                           												class="tocart">
+                           											<span><?php /* @escapeNotVerified */ echo __('Detalhes') ?></span>
+                           										</button></a>
 													<?php else: ?>
 														<?php $postDataHelper = $this->helper('Magento\Framework\Data\Helper\PostHelper');
 														$postData = $postDataHelper->getPostData($block->getAddToCartUrl($_item), ['product' => $_item->getEntityId()])
@@ -237,6 +244,12 @@ switch ($type = $block->getType()) {
 																type="button" title="<?php /* @escapeNotVerified */ echo __('COMPRAR') ?>">
 															<span><?php /* @escapeNotVerified */ echo __('COMPRAR') ?></span>
 														</button>
+                            <a class="product-item-link" href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>">
+                                                                   <button type="submit"
+                           												title="<?php echo $block->escapeHtml(__('Detalhes')); ?>"
+                           												class="tocart">
+                           											<span><?php /* @escapeNotVerified */ echo __('Detalhes') ?></span>
+                           										</button></a>
 													<?php endif; ?>
 												<?php else: ?>
 													<?php if ($_item->getIsSalable()): ?>
@@ -247,7 +260,6 @@ switch ($type = $block->getType()) {
 												<?php endif; ?>
 											</div>
 										<?php endif; ?>
-
 										<?php if ($showWishlist || $showCompare): ?>
 											<div class="add-to-links-secondary" data-role="add-to-links">
 												<?php if ($this->helper('Magento\Wishlist\Helper\Data')->isAllow() && $showWishlist): ?>
@@ -286,7 +298,7 @@ require([
   "jquery",
   "owlcarousel/minjs"
  ], function($,owlCarousel){
-   	
+
       $(".products-slider ol").owlCarousel({
    		items : 4,
 		itemsDesktop : [1200,4],
@@ -299,6 +311,6 @@ require([
    		stopOnHover : true,
    		pagination : false
       });
-      
+
    });
 </script>
