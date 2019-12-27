@@ -1,9 +1,0 @@
-{
-  "send_email": "60",
-  "configmail": "true",
-  "email_destinatario": [
-    "luigifracalanza@gmail.com",
-    "yuri@sa2.com.br"
-  ],
-  "SMTP": "false"
-}
